@@ -1,0 +1,5 @@
+ERROR:	2016-11-16 13:24:31:122,MMBattleRecord.swift,end(),119 --- Record Write to File
+ERROR:	2016-11-16 13:27:41:674,MMPVEMiddleware.swift,handle(request:response:next:),32 --- 192.168.1.104:8900	Input Format Error
+{"playerkey": "zyh", "cards": ["taotie", "xingtian"], "cells": [1, 2]}
+ERROR:	2016-11-16 13:28:22:208,MMPVEMiddleware.swift,handle(request:response:next:),32 --- 192.168.1.104:8900	Input Format Error
+{"playerkey": "zyh", "cards": ["taotie", "xingtian"], "cells": [1, 2]}

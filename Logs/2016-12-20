@@ -1,0 +1,18 @@
+ERROR:	2016-12-20 14:36:43:430,MMPVPBattleMiddleware.swift,handle(request:response:next:),53 --- 0.0.0.0:8900	battle key: 2016-11-30 20:35:16:718-zyh-PVP-Training not found
+DEBUG:	2016-12-20 17:46:53:306,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2016-12-20 17:46:53:329,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2016-12-20 17:49:28:231,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2016-12-20 17:49:28:240,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2016-12-20 17:51:09:730,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2016-12-20 17:52:16:193,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2016-12-20 17:58:58:671,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2016-12-20 17:59:22:801,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2016-12-20 17:59:43:070,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2016-12-20 17:59:52:415,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2016-12-20 18:00:46:439,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-20 18:06:27:221,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-20 18:14:22:972,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-20 18:14:39:892,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-20 18:14:54:748,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-20 18:15:17:007,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-20 18:15:54:104,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'

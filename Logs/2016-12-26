@@ -1,0 +1,6 @@
+DEBUG:	2016-12-26 16:02:11:380,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-26 16:02:28:505,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zc'
+DEBUG:	2016-12-26 16:02:28:515,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zc'
+DEBUG:	2016-12-26 16:02:28:519,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zc',0,0,0,0,0,0,0,0)
+ERROR:	2016-12-26 16:02:42:683,MMUser.swift,readChars(forUser:),49 --- zyh
+ERROR:	2016-12-26 16:03:00:035,MMUser.swift,readArmy(forUser:),32 --- zc

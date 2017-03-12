@@ -1,0 +1,401 @@
+ERROR:	2016-12-01 12:57:59:611,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 12:59:31:980,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:00:09:849,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:11:078,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:12:408,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:13:636,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:14:865,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:16:095,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:17:323,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:18:551,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:19:780,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:21:009,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:00:22:238,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:01:43:441,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:01:44:592,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:01:45:695,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:01:46:810,MMPVPMatchMiddleware.swift,handle(request:response:next:),137 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 13:03:32:395,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:04:35:780,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:05:18:817,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:17:14:561,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:19:01:397,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:28:06:640,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:30:04:417,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:30:06:037,MMPVPBattleMiddleware.swift,handle(request:response:next:),149 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 13:30:24:919,MMPVPBattleMiddleware.swift,handle(request:response:next:),149 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 13:31:01:027,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:31:01:858,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:31:36:359,MMPVPMatchMiddleware.swift,handle(request:response:next:),121 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 13:31:57:141,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:31:57:967,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:31:58:697,MMPVPBattleMiddleware.swift,handle(request:response:next:),157 --- 192.168.0.101:8900	Input Format Error
+
+ERROR:	2016-12-01 13:32:50:302,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:32:51:924,MMPVPBattleMiddleware.swift,handle(request:response:next:),149 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 13:32:53:664,MMPVPBattleMiddleware.swift,handle(request:response:next:),149 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 13:32:54:177,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:33:20:698,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:33:21:626,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:33:51:726,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:33:52:750,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:34:17:640,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:34:18:657,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:34:42:106,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:34:42:830,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:41:13:276,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:41:14:005,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:42:02:239,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:42:02:741,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:42:24:953,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:42:26:697,MMPVPBattleMiddleware.swift,handle(request:response:next:),136 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 13:42:58:440,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:44:32:543,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:45:26:526,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:48:03:508,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:49:21:514,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:50:10:376,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:50:49:695,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:51:43:135,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:53:34:557,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:53:34:564,MMPVPBattleMiddleware.swift,handle(request:response:next:),53 --- 192.168.0.101:8900	battle key: 2016-12-01 13:53:18:585-49A6C59D-6752-44A4-9A6A-882528F71AD7-PVP-Training not found
+ERROR:	2016-12-01 13:54:10:188,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:54:10:200,MMPVPBattleMiddleware.swift,handle(request:response:next:),53 --- 192.168.0.101:8900	battle key: 2016-12-01 13:53:54:229-49A6C59D-6752-44A4-9A6A-882528F71AD7-PVP-Training not found
+ERROR:	2016-12-01 13:54:21:240,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:54:22:978,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 13:54:46:736,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:54:48:490,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 13:55:12:862,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:55:14:485,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 13:55:21:971,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:55:23:598,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 13:56:09:956,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 13:56:13:782,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:56:15:414,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 13:56:30:467,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 13:59:55:274,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 13:59:56:838,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:00:33:721,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:00:35:303,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:01:03:370,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:01:04:943,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:01:46:590,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:01:48:228,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:06:31:150,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:06:32:778,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:07:09:147,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:07:10:769,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:07:32:481,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:07:34:120,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:13:49:521,MMPVPMatchMiddleware.swift,handle(request:response:next:),121 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 14:13:50:666,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:13:51:737,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:14:27:306,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:14:28:936,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:14:28:943,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:14:56:629,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:14:57:689,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:14:58:753,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:14:59:809,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:15:00:858,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:17:583,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:18:810,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:19:947,MMPVPMatchMiddleware.swift,handle(request:response:next:),121 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 14:16:21:063,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:22:133,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:23:183,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:24:341,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:25:480,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:26:535,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:27:581,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:28:634,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:29:768,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:30:902,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:32:020,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:33:169,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:16:34:219,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:15:131,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:16:213,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:17:284,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:18:327,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:19:375,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:20:422,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:21:493,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:22:605,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:23:732,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:24:961,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:26:109,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:27:160,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:28:208,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:29:260,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:30:388,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:31:543,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:32:641,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:33:692,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:34:738,MMPVPMatchMiddleware.swift,handle(request:response:next:),121 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 14:17:35:809,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:36:943,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:38:076,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:39:143,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:40:211,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:41:260,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:42:311,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:43:393,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:44:519,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:45:674,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:46:728,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:17:47:777,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:19:08:385,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:19:09:510,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:19:27:023,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:19:28:659,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:19:28:668,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:19:37:676,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:19:39:309,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:20:02:164,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:24:26:131,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:24:27:283,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:24:28:485,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:24:29:714,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:24:30:942,MMPVPMatchMiddleware.swift,handle(request:response:next:),121 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 14:24:31:054,MMPVPMatchMiddleware.swift,handle(request:response:next:),66 --- 192.168.0.101:8900	Input Format Error
+
+ERROR:	2016-12-01 14:25:13:746,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:14:975,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:16:124,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:17:191,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:21:378,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:22:654,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:23:883,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:25:114,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:42:930,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:44:073,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:25:59:945,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:26:01:314,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:26:01:503,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:26:02:899,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:36:13:709,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:36:24:871,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:36:26:432,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:36:26:442,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:36:27:739,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:36:29:376,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:37:10:745,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:37:42:814,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:37:43:206,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:37:44:435,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:37:44:946,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:39:28:184,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:39:44:349,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:39:46:020,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:46:030,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:47:929,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:47:938,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:49:670,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:49:679,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:51:513,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:51:522,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:53:254,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:53:263,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:54:900,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:54:909,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:56:530,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:56:538,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:39:58:271,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:39:58:280,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:40:26:358,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:40:27:408,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:40:28:459,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:43:43:655,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:43:45:349,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:43:45:358,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:43:46:828,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:43:46:911,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:43:48:568,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:44:18:477,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:44:20:108,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:20:117,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:21:831,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:21:839,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:23:487,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:23:496,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:25:134,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:25:143,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:26:775,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:26:785,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:28:503,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:28:512,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:30:245,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:44:30:254,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:44:43:159,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:44:44:785,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:45:36:920,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:48:29:860,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:48:31:087,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:48:32:317,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:48:33:548,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:48:58:838,MMPVPBattleMiddleware.swift,handle(request:response:next:),20 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 14:49:03:453,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:49:05:084,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:49:05:093,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:49:06:825,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:49:06:834,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:49:08:566,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:49:08:575,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:49:10:102,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:49:10:198,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:49:11:841,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:49:26:281,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:49:27:417,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:49:28:637,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:50:25:265,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:50:41:444,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:50:43:184,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:50:43:193,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:50:44:924,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:50:44:933,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:50:45:334,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:50:46:664,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:50:46:901,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:51:43:443,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:51:45:034,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:51:45:035,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:51:46:575,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:51:46:584,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:20:882,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:20:890,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:22:511,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:22:520,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:24:167,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:24:176,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:25:787,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:25:796,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:27:436,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:27:445,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:29:005,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:29:014,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:30:618,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:30:627,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:32:239,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:32:248,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:33:980,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:33:989,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:35:670,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:35:679,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:37:257,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:37:266,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:38:895,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:38:904,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:40:635,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:40:644,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:42:377,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:42:386,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:44:116,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:44:125,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:45:754,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:45:755,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:47:393,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:47:394,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:49:248,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:49:249,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:50:979,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:50:979,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:52:939,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:52:948,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:54:664,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:54:673,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:56:408,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:56:417,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:58:145,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:58:154,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:52:59:887,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:52:59:896,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:54:04:091,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 14:54:33:487,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:54:35:119,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:54:35:128,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:54:36:761,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:54:36:768,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:54:36:987,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:54:38:396,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:54:38:562,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:55:30:125,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 14:55:31:745,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:55:31:754,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:55:33:382,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:55:33:391,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:55:35:123,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:55:35:132,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-01 14:55:36:772,MMPVPBattleMiddleware.swift,handle(request:response:next:),136 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 14:56:02:259,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:10:670,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:56:47:418,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:47:427,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:56:49:161,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:49:170,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:56:50:899,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:50:908,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:56:52:642,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:52:651,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:56:54:381,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:54:390,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:56:56:225,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:56:234,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:56:57:872,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:56:58:529,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 14:57:30:041,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:57:30:050,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.101:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-01 14:57:31:591,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 14:57:31:828,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"49A6C59D-6752-44A4-9A6A-882528F71AD7"}
+ERROR:	2016-12-01 15:06:02:878,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:06:04:616,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:07:35:659,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:07:37:287,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:08:21:431,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:08:23:061,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:08:50:614,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:08:52:245,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:09:26:252,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:09:27:882,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:09:55:221,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 15:09:56:451,MMPVPMatchMiddleware.swift,handle(request:response:next:),140 --- 192.168.0.101:8900	Empty Message
+ERROR:	2016-12-01 15:10:17:237,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:10:19:080,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:10:57:314,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:10:58:914,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:11:43:570,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:11:45:300,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:12:15:106,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:12:16:656,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:12:41:322,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:12:42:955,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:12:58:518,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:13:00:265,MMPVPBattleMiddleware.swift,handle(request:response:next:),141 --- 192.168.0.101:8900---	{"playerkey":"C41CA141-B3A3-4E1D-8AB8-3127DA7790D1"}
+ERROR:	2016-12-01 15:30:05:470,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:30:38:054,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:35:57:829,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:36:42:073,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:37:16:494,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:37:37:053,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 15:37:55:538,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:25:59:152,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:28:54:250,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:34:08:441,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:34:44:060,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:35:24:000,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:36:07:518,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:52:59:780,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:53:01:415,MMPVPBattleMiddleware.swift,handle(request:response:next:),136 --- 192.168.0.101:8900	Input Empty
+ERROR:	2016-12-01 16:53:39:017,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:54:43:953,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:57:08:203,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:57:44:361,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:58:58:091,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 16:59:52:364,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:04:46:054,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:05:23:333,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:09:12:914,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:09:45:327,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:10:32:772,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:12:10:873,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-01 17:12:56:935,MMPlayerRepo.swift,create(key:),58 --- unknown key: 

@@ -1,0 +1,191 @@
+ERROR:	2016-12-06 17:20:41:963,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:43:181,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:44:409,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:45:634,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:45:635,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:46:863,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:48:090,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:49:247,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:20:50:301,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:21:34:226,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:21:45:773,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:21:47:001,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:20:546,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:21:773,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:22:941,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:24:002,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:25:053,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:26:119,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:27:217,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:28:269,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:29:342,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:30:387,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:31:489,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:32:535,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:33:639,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:22:50:422,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:22:52:151,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:22:53:888,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:22:55:627,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:22:57:366,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:22:59:105,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:00:756,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:02:378,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:04:023,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:38:186,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:39:815,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:41:548,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:43:287,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:45:026,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:46:764,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:48:503,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:50:243,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:23:51:981,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:24:25:836,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:24:27:064,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:24:28:288,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:24:29:518,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:24:30:743,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:24:31:971,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:24:48:643,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:24:50:207,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:24:51:815,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:24:53:552,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:24:55:228,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:24:56:927,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:26:33:476,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:27:27:172,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:27:28:397,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:27:29:623,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:27:30:953,MMPVPMatchMiddleware.swift,handle(request:response:next:),144 --- 192.168.0.102:8900	Empty Message
+ERROR:	2016-12-06 17:27:32:179,MMPVPMatchMiddleware.swift,handle(request:response:next:),125 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 17:47:28:411,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:47:29:423,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:47:56:323,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:47:57:958,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:48:29:579,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:48:31:198,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:48:32:938,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:48:34:576,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:48:36:312,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:48:36:331,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:52:47:194,MMPVPMatchMiddleware.swift,handle(request:response:next:),125 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 17:52:52:104,MMPVPMatchMiddleware.swift,handle(request:response:next:),125 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 17:53:37:516,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:53:39:152,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:53:45:806,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:53:47:438,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 17:53:47:457,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:55:38:609,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 17:55:40:347,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:55:42:001,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 17:55:43:561,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:01:08:406,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:01:12:745,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:02:07:574,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:02:09:202,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:10:841,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:12:582,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:14:225,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:15:851,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:17:595,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:19:259,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:20:860,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:22:496,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:24:194,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:25:770,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:27:423,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:29:145,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:30:902,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:32:637,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:34:361,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:36:100,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:37:746,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:39:376,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:41:114,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:42:854,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:44:587,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:46:327,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:48:065,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:49:806,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:02:56:261,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:02:598,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:13:339,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:14:966,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:21:316,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:22:942,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:29:350,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:30:918,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:37:070,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:38:693,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:03:40:434,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:06:50:260,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:06:52:002,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:06:53:732,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:00:191,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:01:816,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:03:467,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:05:090,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:06:833,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:08:662,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:10:339,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:07:11:936,MMPVPBattleMiddleware.swift,handle(request:response:next:),136 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 18:07:13:573,MMPVPBattleMiddleware.swift,handle(request:response:next:),162 --- 192.168.0.102:8900	Input Format Error
+
+ERROR:	2016-12-06 18:07:20:029,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:07:20:031,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:08:07:679,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:08:08:088,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:08:38:671,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:08:40:311,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:08:46:874,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:08:48:488,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:08:50:122,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:08:53:106,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:09:43:733,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:09:45:351,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:09:46:185,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:10:25:982,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:10:27:590,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:10:29:331,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:10:31:170,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:10:32:910,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:10:33:639,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:10:34:757,MMPVPBattleMiddleware.swift,handle(request:response:next:),136 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 18:11:16:296,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:11:17:910,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:11:19:546,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:11:21:195,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:11:22:748,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:11:24:354,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:11:25:993,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:11:27:125,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:12:08:758,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:12:13:665,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:32:34:522,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:32:36:260,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:32:38:000,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:32:39:558,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:32:41:120,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:32:41:175,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:33:45:615,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:33:47:239,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:33:48:978,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:33:49:126,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:34:40:217,MMPVPMatchMiddleware.swift,handle(request:response:next:),125 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 18:34:53:558,MMPVPMatchMiddleware.swift,handle(request:response:next:),125 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-06 18:35:53:379,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:35:55:091,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:35:56:733,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: C41CA141-B3A3-4E1D-8AB8-3127DA7790D1
+ERROR:	2016-12-06 18:35:57:261,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:37:01:288,MMGuardianRepo.swift,create(key:),27 --- unknown key: 
+ERROR:	2016-12-06 18:37:02:891,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:04:529,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:06:267,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:08:006,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:14:470,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:16:098,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:17:852,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:24:073,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:25:659,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-06 18:37:27:343,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7

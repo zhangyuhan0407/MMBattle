@@ -1,0 +1,59 @@
+ERROR:	2016-12-02 15:54:00:568,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 16:04:40:990,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 16:04:41:019,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 16:20:28:055,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 16:20:28:076,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 16:21:20:686,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 16:21:20:705,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 16:33:24:752,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 16:33:24:760,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 16:33:50:760,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 16:33:50:768,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 17:20:26:814,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 19:35:46:814,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 19:56:10:978,MMPVPBattleMiddleware.swift,handle(request:response:next:),20 --- 192.168.0.102:8900	Input Empty
+ERROR:	2016-12-02 19:56:14:908,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 19:57:16:776,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 19:57:46:002,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 19:59:04:546,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 19:59:04:560,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 20:04:44:100,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:05:12:784,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:05:12:799,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 20:06:17:080,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:06:17:093,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 20:06:52:106,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:06:52:122,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 20:07:18:218,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:07:18:230,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 20:09:36:354,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:10:10:753,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:10:10:765,MMSuanYu.swift,didHit(character:mainTargetDamage:allTargetDamages:),65 --- 
+ERROR:	2016-12-02 20:13:17:554,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:13:17:567,MMPVPBattleMiddleware.swift,handle(request:response:next:),53 --- 192.168.0.102:8900	battle key: 2016-12-02 20:12:46:316-49A6C59D-6752-44A4-9A6A-882528F71AD7-PVP-Training not found
+ERROR:	2016-12-02 20:15:04:344,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:15:05:981,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:07:722,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:09:463,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:11:203,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:12:944,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:14:788,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:16:529,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:18:270,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:20:011,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:15:39:366,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:16:32:820,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:16:34:562,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:16:36:404,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:16:38:043,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:16:38:156,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:17:19:938,MMPlayerRepo.swift,create(key:),58 --- unknown key: 
+ERROR:	2016-12-02 20:17:21:564,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:23:203,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:24:944,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:26:685,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:28:425,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:30:071,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:31:704,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:33:443,MMPVPBattleMiddleware.swift,handle(request:response:next:),152 --- 192.168.0.102:8900	Empty for Player: 49A6C59D-6752-44A4-9A6A-882528F71AD7
+ERROR:	2016-12-02 20:17:33:974,MMPlayerRepo.swift,create(key:),58 --- unknown key: 

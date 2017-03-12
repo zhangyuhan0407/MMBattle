@@ -1,0 +1,6 @@
+DEBUG:	2016-12-23 14:26:20:643,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-23 14:27:41:871,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-23 14:34:18:076,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2016-12-23 14:34:18:087,OCTLogger.swift,write(toFile:atomically:inAppendMode:),95 --- file: /Users/yorg/Developer/MMRealm/UserArmyRepo/zyh in 
+DEBUG:	2016-12-23 14:49:23:443,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2016-12-23 14:50:17:601,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'

@@ -1,0 +1,16 @@
+DEBUG:	2017-01-13 14:20:11:959,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+DEBUG:	2017-01-13 14:20:11:959,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2017-01-13 14:20:11:975,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2017-01-13 14:20:11:982,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2017-01-13 14:20:11:983,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2017-01-13 14:20:11:990,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zyh',0,0,0,0,0,0,0,0)
+DEBUG:	2017-01-13 14:22:01:760,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2017-01-13 14:22:01:767,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2017-01-13 14:22:01:768,OCTDAO.swift,queryFindOne(id:),156 --- SELECT * FROM mmuser WHERE key = 'zyh'
+ERROR:	2017-01-13 14:22:01:768,OCTDAO.swift,findOne(id:),65 --- BAD QUERY IN findOne() status: unknown
+DEBUG:	2017-01-13 14:22:01:769,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zyh',0,0,0,0,0,0,0,0)
+DEBUG:	2017-01-13 14:34:29:155,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zyh',0,0,0,0,0,0,0,0)
+DEBUG:	2017-01-13 14:35:46:804,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zyh',0,0,0,0,0,0,0,0)
+DEBUG:	2017-01-13 14:36:06:908,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zyh',0,0,0,0,0,0,0,0)
+DEBUG:	2017-01-13 14:36:44:759,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'zc',0,0,0,0,0,0,0,0)
+DEBUG:	2017-01-13 14:36:48:056,OCTDAO.swift,queryInsert(forModel:),225 --- INSERT INTO mmuser (pvplevel,pvelevel,yuanbao,key,viplevel,gold,jinstone,mustone,huostone,level,tustone,shuistone) VALUES(0,0,0,'123',0,0,0,0,0,0,0,0)
