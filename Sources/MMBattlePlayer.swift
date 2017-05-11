@@ -15,6 +15,9 @@ class MMBattlePlayer {
     
     weak var battle: MMBattle?
     
+    var key: String
+    
+    
     var enemy: MMBattlePlayer {
         
         return self.battle!.enemy(forPlayer: self)
@@ -22,14 +25,6 @@ class MMBattlePlayer {
     
     var record: MMBattleRecord {
         return self.battle!.record
-    }
-    
-    
-    
-    var player: MMPlayer
-    
-    var key: String {
-        return self.player.key
     }
     
     
@@ -44,108 +39,25 @@ class MMBattlePlayer {
     
     var characters = [MMCharacter]()
     
-    var guardians: [MMGuardian]
+    var guardians: [MMGuardian] = []
     
     
     
     
     
-    
-    
-    var mostSPCharacters: [MMCharacter] {
-        var ret = [MMCharacter]()
-        for i in [5,4,3,2,1,0] {
-            for char in self.aliveCharacters {
-                if char.sp == i {
-                    ret.append(char)
-                }
-            }
-            if ret.count > 0 {
-                return ret
-            }
-        }
-        Logger.error("no characters")
-        return []
-    }
-    
-    
-    var fewerSPCharacters: [MMCharacter] {
-        var ret = [MMCharacter]()
-        for i in 0...5 {
-            for char in self.aliveCharacters {
-                if char.sp == i {
-                    ret.append(char)
-                }
-            }
-            if ret.count > 0 {
-                return ret
-            }
-        }
-        Logger.error("no characters")
-        return []
-    }
-    
-    
-    var mostHPCharacter: MMCharacter {
-        var ret = self.aliveCharacters[0]
-        for char in self.aliveCharacters {
-            if char.hp >= ret.hp {
-                ret = char
-            }
-        }
-        return ret
-    }
-    
-    
-    var fewerHPCharacter: MMCharacter {
-        var ret = self.aliveCharacters[0]
-        for char in self.aliveCharacters {
-            if char.hp <= ret.hp {
-                ret = char
-            }
-        }
-        return ret
-    }
-    
-    
-    var aliveCharacters: [MMCharacter] {
-        return self.characters.filter { $0.isAlive }
-    }
-    
-    
-    var nextAliveCharacter: MMCharacter? {
-        
-        for char in self.characters {
-            if char.isAlive && !char.isAttackedInCurrentRound {
-                char.isAttackedInCurrentRound = true
-                return char
-            }
-        }
-        
-        return nil
-    }
-    
-    
-    
-    
-    
-    ///Func
-    
-    
-    
-    init(player: MMPlayer, characters: [MMCharacter], guardian: [MMGuardian]) {
-        self.player = player
-        self.guardians = guardian
+    init(key: String, characters: [MMCharacter]) {
+        self.key = key
         self.addCharacters(characters)
     }
-
+    
+    
     
     func addCharacter(_ character: MMCharacter) {
-//        for char in self.characters {
-//            if char.key == character.key {
-//                return
-//            }
-//        }
+        //        for char in self.characters {
+        //            if char.key == character.key {
+        //                return
+        //            }
+        //        }
         
         character.player = self
         self.characters.append(character)
@@ -165,6 +77,29 @@ class MMBattlePlayer {
         }
     }
     
+    
+    
+    
+    
+    
+    var aliveCharacters: [MMCharacter] {
+        return self.characters.filter { $0.isAlive }
+    }
+    
+    
+    var nextAliveCharacter: MMCharacter? {
+        
+        for char in self.characters {
+            if char.isAlive && !char.isAttackedInCurrentRound {
+                char.isAttackedInCurrentRound = true
+                return char
+            }
+        }
+        
+        return nil
+    }
+    
+
     
     var hasAliveCharacter: Bool {
         for char in self.characters {
@@ -237,7 +172,7 @@ class MMBattlePlayer {
             mainTarget = temp
             
         default:
-            mainTarget = player.findCharacters(inCells: AttackRule.find(position: damage.source.position, rule: damage.rule)).first!
+            mainTarget = player.findCharacters(inCells: AttackRule.find(position: damage.source.position, rule: damage.rule)).first ?? player.characters.first!
 
         }
         
@@ -285,8 +220,8 @@ class MMBattlePlayer {
         let targets = self.findTargets(damage: damage)
         
 
-        char.setMainTarget(character: char, damage: damage)
-        char.setSideTargets(character: char, damage: damage)
+//        char.setMainTarget(character: char, damage: damage)
+//        char.setSideTargets(character: char, damage: damage)
         
         
         
@@ -335,7 +270,7 @@ class MMBattlePlayer {
 
 
 func ==(p1: MMBattlePlayer, _ p2: MMBattlePlayer) -> Bool {
-    return p1.player.key == p2.player.key
+    return p1.key == p2.key
 }
 
 
@@ -371,30 +306,103 @@ extension MMBattlePlayer {
 
 
 
+extension MMBattlePlayer {
+    
+    
+    ///Func
+    
+    
+    var mostSPCharacters: [MMCharacter] {
+        var ret = [MMCharacter]()
+        for i in [5,4,3,2,1,0] {
+            for char in self.aliveCharacters {
+                if char.sp == i {
+                    ret.append(char)
+                }
+            }
+            if ret.count > 0 {
+                return ret
+            }
+        }
+        Logger.error("no characters")
+        return []
+    }
+    
+    
+    var fewerSPCharacters: [MMCharacter] {
+        var ret = [MMCharacter]()
+        for i in 0...5 {
+            for char in self.aliveCharacters {
+                if char.sp == i {
+                    ret.append(char)
+                }
+            }
+            if ret.count > 0 {
+                return ret
+            }
+        }
+        Logger.error("no characters")
+        return []
+    }
+    
+    
+    var mostHPCharacter: MMCharacter {
+        var ret = self.aliveCharacters[0]
+        for char in self.aliveCharacters {
+            if char.hp >= ret.hp {
+                ret = char
+            }
+        }
+        return ret
+    }
+    
+    
+    var fewerHPCharacter: MMCharacter {
+        var ret = self.aliveCharacters[0]
+        for char in self.aliveCharacters {
+            if char.hp <= ret.hp {
+                ret = char
+            }
+        }
+        return ret
+    }
+    
+}
+
+
+
+
+
+
+
 class MMBattlePlayerAI: MMBattlePlayer {
     
     init() {
-        let player = MMPlayerRepo.findPlayer(key: "ai")
-        let characters = MMCharacterRepo.create(cards: ["xuanwu", "taotie", "fengbo", "fenghou", "suanyu"], fabaos: [], cells: [1, 3, 6, 11, 15])
-        super.init(player: player, characters: characters, guardian: [])
+        super.init(key: "AI", characters: [])
+//        let player = MMPlayerRepo.findPlayer(key: "ai")
+//        let cards = ["fs_bingshuang", "fs_aoshu", "sm_zengqiang", "sm_zhiliao", "sm_yuansu"]
+//        let fabao = [JSON].init(repeating: JSON(""), count: 5)
+//        let cells = [1, 3, 6, 11, 15]
+//        let characters = MMCharacterRepo.create(cards: cards, fabaos: fabao, cells: cells)
+//        super.init(player: player, characters: characters, guardian: [])
     }
     
     static func rechargeCharacters(round: Int) -> [MMCharacter] {
         
-        if round == 3 {
-//            let char = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-            return []
-        } else if round == 4 {
-//            let char1 = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-            let char2 = MMCharacter(card: MMCardRepo.findOne(key: "xingtian"), fabao: MMFaBaoRepo.findOne(key: ""), position: 2)
-            return [char2]
-        } else if round == 2 {
-//            let char1 = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-//            let char2 = MMCharacter(card: MMCardRepo.findOne(key: "xingtian"), fabao: MMFaBaoRepo.findOne(key: ""), position: 2)
-            let char = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-            let char3 = MMCharacter(card: MMCardRepo.findOne(key: "change"), fabao: MMFaBaoRepo.findOne(key: ""), position: 14)
-            return [char, char3]
-        }
+//        if round == 3 {
+////            let char = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
+//            return []
+//        } else if round == 4 {
+////            let char1 = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
+//            let char2 = MMCharacter(card: MMCardRepo.sharedInstance.cards["fs_aoshu"]!, fabao: MMFaBaoRepo.findOne(key: ""), position: 2)
+//            return [char2]
+//        } else if round == 2 {
+////            let char1 = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
+////            let char2 = MMCharacter(card: MMCardRepo.findOne(key: "xingtian"), fabao: MMFaBaoRepo.findOne(key: ""), position: 2)
+//            let char = MMCharacter(card: MMCardRepo.sharedInstance.cards["ms_shensheng"]!, fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
+//            let char3 = MMCharacter(card: MMCardRepo.sharedInstance.cards["ms_jielv"]!, fabao: MMFaBaoRepo.findOne(key: ""), position: 14)
+//            return [char, char3]
+//        }
         
         return []
     }

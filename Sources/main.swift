@@ -22,9 +22,9 @@ router.get("/test", middleware: MMTestMiddleware())
 
 
 //@deprecated
-router.get("/pve/:battleid", middleware: MMPVECheckMissionMiddleware())
+//router.get("/pve/:battleid", middleware: MMPVECheckMissionMiddleware())
 
-router.post("/pve", middleware: MMPVEBattleMiddleware())
+router.post("/pve/:battleid/:key", middleware: MMPVEBattleMiddleware())
 
 
 
@@ -48,7 +48,7 @@ router.post("/pvp", middleware: MMPVPBattleMiddleware())
 
 
 //@deprecated
-router.get("/player/:playerkey/:type", middleware: MMCheckPlayerMiddleware())
+//router.get("/player/:playerkey/:type", middleware: MMCheckPlayerMiddleware())
 
 
 router.get("battles") { (request, response, next) in

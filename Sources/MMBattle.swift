@@ -90,22 +90,22 @@ class MMBattle {
         
         currentRound += 1
         
-        if p1.guardians.count > currentRound - 1 {
-            end()
-            if !isGameOver {
-                p1.guardians[currentRound - 1].act(player: p1)
-            }
-        }
-        
-        if p2.guardians.count > currentRound - 1 {
-            end()
-            if !isGameOver {
-                p2.guardians[currentRound - 1].act(player: p2)
-            }
-        }
-        
-        
-        self.record.pushGuardian()
+//        if p1.guardians.count > currentRound - 1 {
+//            end()
+//            if !isGameOver {
+//                p1.guardians[currentRound - 1].act(player: p1)
+//            }
+//        }
+//        
+//        if p2.guardians.count > currentRound - 1 {
+//            end()
+//            if !isGameOver {
+//                p2.guardians[currentRound - 1].act(player: p2)
+//            }
+//        }
+//        
+//        
+//        self.record.pushGuardian()
         
         for _ in 0..<max(p1.characters.count, p2.characters.count) {
             end()

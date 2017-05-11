@@ -95,7 +95,7 @@ class MSShenSheng: MMCard {
         
         super.init()
         
-        self.key = "shenmu"
+        self.key = "ms_shensheng"
         self.id = 7
         self.name = "神牧"
         
@@ -157,7 +157,7 @@ class MSJieLv: MMCard {
         
         super.init()
         
-        self.key = "jielvmu"
+        self.key = "ms_jielv"
         self.id = 8
         self.name = "戒律牧"
         
@@ -212,7 +212,7 @@ class MSAnYing: MMCard {
         
         super.init()
         
-        self.key = "anmu"
+        self.key = "ms_anying"
         self.id = 9
         self.name = "暗牧"
         

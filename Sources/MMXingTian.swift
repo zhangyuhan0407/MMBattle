@@ -54,7 +54,7 @@ class SMZengQiang: MMCard {
     override init() {
         super.init()
         
-        self.key = "zengqiangsa"
+        self.key = "sm_zengqiang"
         self.id = 17
         self.name = "增强萨"
         
@@ -94,7 +94,7 @@ class SMYuanSu: MMCard {
     override init() {
         super.init()
         
-        self.key = "yuansusa"
+        self.key = "sm_yuansu"
         self.id = 18
         self.name = "元素萨"
         
@@ -136,9 +136,33 @@ class SMYuanSu: MMCard {
 }
 
 
-//class SMZhiLiao: MMCard {
-//    
-//}
+class SMZhiLiao: MMCard {
+    override init() {
+        super.init()
+        
+        self.key = "sm_huifu"
+        self.id = 19
+        self.name = "恢复萨"
+        
+        self.attackRule = .threeRandom
+        self.attackArea = .single
+        self.attackType = .physics
+        
+        
+        self.ball = Ball.shui.rawValue
+        self.category = CharacterCategory.melee.rawValue
+        
+        
+        self.sp = 3
+        self.hp = 100
+        self.atk = 50
+        self.def = 0
+        self.mag = 0
+        self.spd = 10
+        
+        
+    }
+}
 
 
 

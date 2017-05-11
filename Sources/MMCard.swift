@@ -13,11 +13,11 @@ import OCTJSON
 import OCTFoundation
 
 
-class MMCard: MMCardModel {
+class MMCard {
     
-    var key: String = "DEFAULT"
-    var id: Int = 0
-    var name: String = ""
+    var key: String!
+    var id: Int!
+    var name: String!
     
     var attackRule: AttackRule = .melee
     var attackArea: AttackArea = .single

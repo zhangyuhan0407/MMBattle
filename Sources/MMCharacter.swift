@@ -7,15 +7,19 @@
 //
 
 import Foundation
+import OCTJSON
 
 
-class MMCharacter {
+typealias MMUnit = MMCharacter
+
+
+class MMCharacter: CustomStringConvertible {
     
     weak var player: MMBattlePlayer?
     
-    var card: MMCard
-    var fabao: MMFabaoModel
-    var position: Int
+    var card: MMCard!
+
+    var position: Int = 0
     
     var buffs: [MMBuff] = []
     
@@ -118,37 +122,60 @@ class MMCharacter {
     
     
     
+    init() {}
     
     
-    init(card: MMCard, fabao: MMFabaoModel, position: Int) {
+    
+    static func deserialize(fromJSON json: JSON) -> MMCharacter {
         
-        self.card = card
-        self.fabao = fabao
-        self.position = position
+        let char = MMCharacter()
+        char.card = MMCardFactory.sharedInstance.cards[json[kCardKey].string ?? json[kKey].stringValue]!
+        char.position = json[kPosition].int ?? 0
         
-        self.maxHP = card.hp + fabao.hp
-        self.maxSP = card.sp
+        char.maxHP = json[kMaxHP].int!
+        char.maxSP = json[kMaxSP].int!
         
-        self.hp = maxHP
-        self.sp = 0
-        
-        self.atk = card.atk + fabao.atk
-        self.def = card.def + fabao.def
-        self.mag = card.mag + fabao.mag
-        self.spd = card.spd + fabao.spd
-        
-        self.baoji = card.baoji + fabao.baoji
-        self.shanbi = card.shanbi + fabao.shanbi
-        self.mingzhong = card.mingzhong + fabao.mingzhong
-        self.gedang = card.gedang + fabao.gedang
+        char.hp = json[kHP].int ?? char.maxHP
+        char.sp = json[kSP].int ?? 0
         
         
-        self.zaisheng = card.zaisheng + fabao.zaisheng
-        self.xixue = card.xixue + fabao.xixue
-        self.fantanwuli = card.fantanwuli + fabao.fantanwuli
-        self.fantanfashu = card.fantanfashu + fabao.fantanfashu
+        char.atk = json[kATK].int!
+        char.mag = json[kMAG].int!
+        char.def = json[kDEF].int!
+        char.spd = json[kSPD].int!
         
+        char.baoji = json[kBaoJi].int!
+        char.mingzhong = json[kMingZhong].int!
+        char.shanbi = json[kShanBi].int!
+        char.gedang = json[kGeDang].int!
+        
+        char.xixue = json[kXiXue].int!
+        char.zaisheng = json[kZaiSheng].int!
+        char.fantanwuli = json[kFanTanWuLi].int ?? 0
+        char.fantanfashu = json[kFanTanFaShu].int ?? 0
+        
+        
+        if let array = json[kBuffs].array {
+            for buff in array {
+                char.addBuff(MMBuff.deserialize(fromJSON: buff))
+            }
+        }
+        
+        return char
     }
+    
+    
+    static func deserialize(fromJSONs jsons: [JSON]) -> [MMCharacter] {
+        return jsons.map({ (json) -> MMCharacter in
+            return MMCharacter.deserialize(fromJSON: json)
+        })
+    }
+    
+    
+    var description: String {
+        return "cardkey: \(key), position: \(position)"
+    }
+    
     
     
     
@@ -163,6 +190,10 @@ func !=(char1: MMCharacter, char2: MMCharacter) -> Bool {
     return char1.card.key != char2.card.key
 }
 
+
+
+
+//class 
 
 
 

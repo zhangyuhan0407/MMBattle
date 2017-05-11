@@ -11,14 +11,18 @@ import OCTJSON
 import OCTFoundation
 
 
-class MMCardRepo {
+class MMCardFactory {
     
-    static var cards: [String: MMCard] = [:]
+    var cards: [String: MMCard] = [:]
+    
+    static var sharedInstance = MMCardFactory()
+    
+    private init() {
+        reload()
+    }
     
     
-    
-    
-    static func reload() {
+    func reload() {
         
         cards.updateValue(FSBingShuang(), forKey: "fs_bingshuang")
         cards.updateValue(FSHuoYan(), forKey: "fs_huoyan")
@@ -53,18 +57,33 @@ class MMCardRepo {
         cards.updateValue(QSChengJie(), forKey: "qs_chengjie")
         
         
+        
+        cards.updateValue(ZSFangYu(), forKey: "npc_zs_1")
+        cards.updateValue(LRSheJi(), forKey: "npc_lr_1")
+        cards.updateValue(FSHuoYan(), forKey: "npc_fs_1")
+        cards.updateValue(DZCiSha(), forKey: "npc_dz_1")
+        
+        
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_101")
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_102")
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_103")
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_104")
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_105")
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_106")
+        cards.updateValue(SMZengQiang(), forKey: "npc_boss_107")
+        
     }
     
     
     
     
-    static func deserilize(fromJSON json: JSON) -> MMCard {
+    func deserilize(fromJSON json: JSON) -> MMCard {
         
         let card = cards[json["key"].string!]!
 
         
-        card.id     = json["id"].int ?? 0
-        card.name   = json["name"].string ?? "DEFAULT"
+        card.id     = json["id"].int!
+        card.name   = json["key"].string!
         
         card.attackRule = AttackRule.deserilize(fromString: json["attackrule"].string!)
         card.attackArea = AttackArea.deserilize(fromString: json["attackarea"].string!)
@@ -92,69 +111,10 @@ class MMCardRepo {
         card.fantanfashu = json["fantanfashu"].int ?? 0
         
         
-        
-        
         return card
         
     }
     
-    
-    static func findOne(key: String) -> MMCard {
-        
-        if cards.count == 0 {
-            reload()
-        }
-        
-        
-        return cards[key] ?? LRSheJi()
-        
-        
-        
-//        let card: MMCard
-//        
-//        switch key {
-//        case "taotie":
-//            card = MMTaoTie()
-//        case "xingtian":
-//            card = MMXingTian()
-//        case "houyi":
-//            card = MMHouYi()
-//        case "change":
-//            card = MMChangE()
-//        case "xuanwu":
-//            card = MMXuanWu()
-//        case "fengbo":
-//            card = MMFengBo()
-//        case "fenghou":
-//            card = MMFengHou()
-//        case "suanyu":
-//            card = MMSuanYu()
-//            
-//        case "qiongqi":
-//            card = MMQiongQi()
-//        case "baize":
-//            card = MMBaiZe()
-//        case "taowu":
-//            card = MMTaoWu()
-//        case "fenghuang":
-//            card = MMFengHuang()
-//        case "dangkang":
-//            card = MMDangKang()
-//        case "qingniao":
-//            card = MMQingNiao()
-//        case "hundun":
-//            card = MMHunDun()
-//        case "leishen":
-//            card = MMLeiShen()
-//            
-//        default:
-//            Logger.error("unknown card: \(key)")
-//            card = MMTaoTie()
-//        }
-        
-        
-        
-    }
     
     
 }

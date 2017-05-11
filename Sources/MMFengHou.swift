@@ -75,7 +75,7 @@ class QSShenSheng: MMCard {
     override init() {
         super.init()
         
-        self.key = "naiqi"
+        self.key = "qs_zhiliao"
         self.id = 26
         self.name = "奶骑"
         
@@ -108,7 +108,7 @@ class QSChengJie: MMCard {
     override init() {
         super.init()
         
-        self.key = "chengjieqi"
+        self.key = "qs_chengjie"
         self.id = 27
         self.name = "惩戒骑"
         
@@ -152,7 +152,7 @@ class QSFangYu: MMCard {
     override init() {
         super.init()
         
-        self.key = "fangqi"
+        self.key = "qs_fangyu"
         self.id = 28
         self.name = "防骑"
         

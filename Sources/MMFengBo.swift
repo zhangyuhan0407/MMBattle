@@ -53,7 +53,7 @@ class SSHuiMie: MMCard {
         
         super.init()
         
-        self.key = "huimie"
+        self.key = "ss_huimie"
         self.id = 3
         self.name = "毁灭术"
         
@@ -89,7 +89,7 @@ class SSTongKu: MMCard {
         
         super.init()
         
-        self.key = "tongku"
+        self.key = "ss_tongku"
         self.id = 4
         self.name = "痛苦术"
         
@@ -125,7 +125,7 @@ class SSEMo: MMCard {
         
         super.init()
         
-        self.key = "emo"
+        self.key = "ss_emo"
         self.id = 6
         self.name = "恶魔术"
         

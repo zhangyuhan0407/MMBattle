@@ -69,7 +69,7 @@ class MMXiongDe: MMCard {
         
         super.init()
         
-        self.key = "xiongde"
+        self.key = "dly_xiong"
         self.id = 9
         self.name = "熊德"
         
@@ -103,7 +103,7 @@ class MMMaoDe: MMCard {
         
         super.init()
         
-        self.key = "maode"
+        self.key = "dly_mao"
         self.id = 9
         self.name = "猫德"
         
@@ -141,7 +141,7 @@ class MMNaiDe: MMCard {
         
         super.init()
         
-        self.key = "naide"
+        self.key = "dly_zhiliao"
         self.id = 9
         self.name = "奶德"
         
@@ -193,7 +193,7 @@ class MMNiaoDe: MMCard {
         
         super.init()
         
-        self.key = "niaode"
+        self.key = "dly_niao"
         self.id = 9
         self.name = "鸟德"
         

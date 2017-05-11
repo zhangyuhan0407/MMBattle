@@ -78,7 +78,7 @@ class FSAoShu: MMCard {
         
         super.init()
         
-        self.key = "aofa"
+        self.key = "fs_aoshu"
         self.id = 1
         self.name = "奥法"
         
@@ -129,7 +129,34 @@ class FSAoShu: MMCard {
 
 
 class FSBingShuang: MMCard {
-    
+    override init() {
+        
+        super.init()
+        
+        self.key = "fs_bingshuang"
+        self.id = 2
+        self.name = "冰法"
+        
+        self.attackRule = .range
+        self.attackArea = .single
+        self.attackType = .magic
+        
+        
+        self.ball = Ball.jin.rawValue
+        self.category = CharacterCategory.disabler.rawValue
+        
+        skill2Factor = 1.5
+        
+        self.sp = 2
+        self.hp = 100
+        self.atk = 0
+        self.def = 0
+        self.mag = 90
+        self.spd = 30
+        
+        self.baoji = 30
+        
+    }
 }
 
 
@@ -140,7 +167,7 @@ class FSHuoYan: MMCard {
         
         super.init()
         
-        self.key = "huofa"
+        self.key = "fs_huoyan"
         self.id = 3
         self.name = "火法"
         

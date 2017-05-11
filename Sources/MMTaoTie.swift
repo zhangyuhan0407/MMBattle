@@ -68,9 +68,9 @@ class LRShengCun: MMCard {
     override init() {
         super.init()
         
-        self.key = "sheji"
+        self.key = "lr_shengcun"
         self.id = 3
-        self.name = "射击猎"
+        self.name = "生存猎"
         
         self.attackRule = .range
         self.attackArea = .nineCube
@@ -115,11 +115,57 @@ class LRShengCun: MMCard {
 
 
 class LRSheJi: MMCard {
-    
+    override init() {
+        super.init()
+        
+        self.key = "lr_sheji"
+        self.id = 4
+        self.name = "射击猎"
+        
+        self.attackRule = .range
+        self.attackArea = .nineCube
+        self.attackType = .demoralize
+        
+        
+        self.ball = Ball.huo.rawValue
+        self.category = CharacterCategory.disabler.rawValue
+        
+        
+        self.sp = 2
+        self.hp = 100
+        self.atk = 20
+        self.def = 0
+        self.mag = 0
+        self.spd = 30
+        
+    }
 }
 
 class  LRShouWang: MMCard {
-    
+    override init() {
+        super.init()
+        
+        self.key = "lr_shouwang"
+        self.id = 5
+        self.name = "兽王猎"
+        
+        self.attackRule = .range
+        self.attackArea = .nineCube
+        self.attackType = .demoralize
+        
+        
+        self.ball = Ball.huo.rawValue
+        self.category = CharacterCategory.disabler.rawValue
+        
+        
+        self.sp = 2
+        self.hp = 100
+        self.atk = 20
+        self.def = 0
+        self.mag = 0
+        self.spd = 30
+        
+    }
 }
 
 

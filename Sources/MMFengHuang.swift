@@ -46,7 +46,7 @@ class DZCiSha: MMCard {
     override init() {
         super.init()
         
-        self.key = "cishazei"
+        self.key = "dz_cisha"
         self.id = 10
         self.name = "刺杀贼"
         
@@ -78,7 +78,7 @@ class DZZhanDou: MMCard {
     override init() {
         super.init()
         
-        self.key = "zhandouzei"
+        self.key = "dz_zhandou"
         self.id = 11
         self.name = "战斗贼"
         
@@ -109,7 +109,7 @@ class DZMinRui: MMCard {
     override init() {
         super.init()
         
-        self.key = "minruizei"
+        self.key = "dz_minrui"
         self.id = 12
         self.name = "敏锐贼"
         

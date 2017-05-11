@@ -15,32 +15,21 @@ import OCTFoundation
 class MMPVPMatchMiddleware: RouterMiddleware {
     
     
-//    struct MatchPlayer {
-//        var player: MMPlayer
-//        var is
-//    }
+    static var players = [String]()
     
-    
-    static var players = [MMPlayer]()
-    
-    static func hasPlayer(_ player: MMPlayer) -> Bool {
-        for p in players {
-            if p.key == player.key {
-                return true
-            }
-        }
-        return false
+    static func hasPlayer(_ player: String) -> Bool {
+        return players.contains(player)
     }
     
     
-    static func removePlayer(_ player: MMPlayer) {
+    static func removePlayer(_ player: String) {
         players = players.filter {
-            player.key != $0.key
+            player != $0
         }
     }
     
     
-    static func addPlayer(_ player: MMPlayer) {
+    static func addPlayer(_ player: String) {
         if hasPlayer(player) {
             return
         }
@@ -63,10 +52,10 @@ class MMPVPMatchMiddleware: RouterMiddleware {
         Logger.info(request.headers["host"]! + "\t\(json)")
         
         
-        let player = MMPlayerRepo.findPlayer(key: playerKey)
+//        let player = MMPlayerRepo.findPlayer(key: playerKey)
         
         
-        MMPVPMatchMiddleware.addPlayer(player)
+        MMPVPMatchMiddleware.addPlayer(playerKey)
         
         startMatching()
         
@@ -84,10 +73,11 @@ class MMPVPMatchMiddleware: RouterMiddleware {
     func startMatching() {
         
         MMPVPMatchMiddleware.lock.lock()
+        
         if MMPVPMatchMiddleware.players.count > 1 {
             
-            let p1 = MMBattlePlayer(player: MMPVPMatchMiddleware.players[0], characters: [], guardian: [])
-            let p2 = MMBattlePlayer(player: MMPVPMatchMiddleware.players[1], characters: [], guardian: [])
+            let p1 = MMBattlePlayer(key: MMPVPMatchMiddleware.players[0], characters: [])
+            let p2 = MMBattlePlayer(key: MMPVPMatchMiddleware.players[1], characters: [])
             
             let battle = MMPVPBattleManager.create(p1: p1, p2: p2)
             
@@ -95,9 +85,7 @@ class MMPVPMatchMiddleware: RouterMiddleware {
                              "battlekey": battle.key,
                              "battleid": battle.id,
                              "player1key": p1.key,
-                             "player2key": p2.key,
-                             "cardkeys": ["taotie", "xingtian", "xuanwu", "fengbo", "fenghou", "change", "suanyu", "houyi",
-                "dangkang", "leishen", "hundun", "fenghuang", "taowu", "qingniao", "baize", "qiongqi"]])
+                             "player2key": p2.key])
             
             
             
@@ -107,6 +95,7 @@ class MMPVPMatchMiddleware: RouterMiddleware {
             
             MMPVPMatchMiddleware.players = []
         }
+        
         MMPVPMatchMiddleware.lock.unlock()
         
     }
@@ -177,23 +166,7 @@ class MMPVPFriendlyMatchMiddleware: RouterMiddleware {
 
 
 
-extension RouterRequest {
-    
-    var jsonBody: JSON? {
-        do {
-            
-            guard let s = try self.readString() else {
-                return nil
-            }
-            
-            return try JSON.deserialize(s)
-            
-        } catch {
-            return nil
-        }
-    }
-    
-}
+
 
 
 

@@ -72,6 +72,8 @@ extension MMCharacter {
     func willHit() -> MMDamage {
         let damage = self.createDamage()
         
+//        self.fabao.will
+        
         for buff in self.buffs {
             buff.willHit(character: self, damage: damage)
         }

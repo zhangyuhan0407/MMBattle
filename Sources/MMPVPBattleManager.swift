@@ -19,10 +19,13 @@ class MMPVPBattleManager {
     
     
     static func create(p1: MMBattlePlayer, p2: MMBattlePlayer) -> MMPVPBattle {
-        let battle = MMPVPBattle(type: "PVP", p1: p1, p2: p2)
-        MMPVPBattleManager.battles.append(battle)
+
+        let battle = MMPVPBattle(type: "PVP_\(p1.key)_\(p2.key)", p1: p1, p2: p2)
         p1.battle = battle
         p2.battle = battle
+        
+        MMPVPBattleManager.battles.append(battle)
+        
         return battle
     }
     
@@ -85,85 +88,6 @@ extension OCTMessageQueueType {
         queue.removeValue(forKey: key)
         return message
     }
-    
-}
-
-
-
-class MMPVPPlayerManager: NSObject {
-    
-    static var sharedInstance = MMPVPPlayerManager()
-    
-    
-    var players = [(Int, MMPlayer)]()
-    
-    let MAX_COUNT = 5
-    
-    
-    func add(_ player: MMPlayer) {
-        if let index = index(ofPlayer: player) {
-            players[index].0 = MAX_COUNT
-            return
-        }
-        
-        players.append((MAX_COUNT, player))
-    }
-    
-    
-    func index(ofPlayer player: MMPlayer) -> Int? {
-        for i in 0..<players.count {
-            if players[i].1 == player {
-                return i
-            }
-        }
-        return nil
-    }
-    
-    
-    func remove(_ player: MMPlayer) {
-        players = players.filter {
-            $0.1.key != player.key
-        }
-    }
-    
-    
-    func removePlayerTimer() {
-        print("--------------Remove player--------------")
-        for i in 0..<players.count {
-            players[i].0 -= 1
-        }
-
-        players = players.filter {
-            $0.0 > 0
-        }
-    }
-
-    
-    func start() {
-        #if os(Linux)
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
-                print("--------------Remove player--------------")
-                for i in 0..<self.players.count {
-                    self.players[i].0 -= 1
-                }
-                
-                self.players = self.players.filter {
-                    $0.0 > 0
-                }
-            }
-        #else
-            DispatchQueue.global().async() { [unowned self] in
-                while true {
-                    self.removePlayerTimer()
-                    sleep(3)
-                }
-            }
-        #endif   
-        
-    }
-    
-    
-    
     
 }
 

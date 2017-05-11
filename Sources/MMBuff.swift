@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OCTJSON
 
 
 class MMBuff: MMCharacterFlow {
@@ -42,6 +43,11 @@ class MMBuff: MMCharacterFlow {
     
     func removeFromCharacter() {
         self.character?.removeBuff(self)
+    }
+    
+    
+    static func deserialize(fromJSON json: JSON) -> MMBuff {
+        return MMBuff()
     }
     
     

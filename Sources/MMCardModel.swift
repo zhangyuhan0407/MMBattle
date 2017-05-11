@@ -11,9 +11,9 @@ import Foundation
 
 protocol MMCardModel {
     
-    var key: String { get }
-    var id: Int { get }
-    var name: String { get }
+    var key: String { get set }
+    var id: Int { get set }
+    var name: String { get set }
     
     var attackRule: AttackRule { get }  //默认大招小招攻击规则相同
     var attackArea: AttackArea { get }  //大招攻击范围，默认小招攻击范围为.single
