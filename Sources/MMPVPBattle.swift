@@ -23,11 +23,11 @@ class MMPVPBattle: MMBattle {
     }
     
     
-    var p1NewChars = [MMCharacter]()
-    var p2NewChars = [MMCharacter]()
+    var p1NewChars = [MMUnit]()
+    var p2NewChars = [MMUnit]()
     
     
-    func receiveCommand(playerKey: String, characters: [MMCharacter], guardian: MMGuardian?) {
+    func receiveCommand(playerKey: String, characters: [MMUnit], guardian: MMGuardian?) {
         if playerKey == p1.key {
             p1.addCharacters(characters)
             p1NewChars = characters
@@ -83,7 +83,7 @@ class MMPVPBattle: MMBattle {
             p2.guardians.last?.act(player: p2)
             
             
-            self.record.pushGuardian()
+//            self.record.pushGuardian()
            
             
             for _ in 0..<max(p1.characters.count, p2.characters.count) {

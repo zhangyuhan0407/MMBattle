@@ -46,6 +46,12 @@ class MMBattle {
         p2.characters.sort{ $0.position < $1.position }
         
         repeat {
+            if currentRound >= 1 {
+                isGameOver = true
+                self.record.putResult(JSON(["isgameover": true, "winner": p1.key, "loser": p2.key, "winpoints": 100, "losepoints": 100]))
+                self.record.end()
+                break
+            }
             startNextRound()
         } while !isGameOver
         

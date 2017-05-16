@@ -11,11 +11,11 @@ import Foundation
 
 class MMBattlePlayerFactory {
     
-    static func createBattlePlayer(player: String, characters: [MMCharacter]) -> MMBattlePlayer {
+    static func createBattlePlayer(player: String, characters: [MMUnit]) -> MMBattlePlayer {
         let battlePlayer = MMBattlePlayer(key: player, characters: characters)
         
         for char in battlePlayer.characters {
-            char.player = battlePlayer
+            char._player = battlePlayer
         }
         
         return battlePlayer
@@ -26,7 +26,7 @@ class MMBattlePlayerFactory {
         let battlePlayer = MMBattlePlayer(key: "\(key)_PVP_AI", characters: units)
         
         for char in battlePlayer.characters {
-            char.player = battlePlayer
+            char._player = battlePlayer
         }
         
         return battlePlayer
@@ -37,7 +37,7 @@ class MMBattlePlayerFactory {
         let battlePlayer = MMBattlePlayer(key: "\(key)_PVE_AI", characters: units)
         
         for char in battlePlayer.characters {
-            char.player = battlePlayer
+            char._player = battlePlayer
         }
         
         return battlePlayer

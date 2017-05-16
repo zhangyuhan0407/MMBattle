@@ -7,16 +7,8 @@
 //
 
 import Foundation
+import OCTFoundation
 import OCTJSON
-
-
-#if os(Linux)
-    let DungeonPath = ""
-    let NPCCardPath = ""
-#else
-    let DungeonPath = "/Users/yorg/Developer/MMFileServer/dungeons"
-    let NPCCardPath = "/Users/yorg/Developer/MMFileServer/cards"
-#endif
 
 
 class MMPVEFactory {
@@ -32,30 +24,20 @@ class MMPVEFactory {
         let simpleCharJSONs = json[kCharacters][boss].array!
         
         
-        var char2 = [MMCharacter]()
+        var char2 = [MMUnit]()
         for simpleJSON in simpleCharJSONs {
-            let char = readNPCCharacter(key: simpleJSON[kCardKey].stringValue)
+            let char = MMUnitFactory.createNPCUnit(key: simpleJSON[kCardKey].stringValue)
             char.position = simpleJSON[kPosition].intValue
             char2.append(char)
         }
         
-        
-        
-        print("pve units: \(index)")
-        print(char2)
         
         return char2
     }
     
     
     
-    static func readNPCCharacter(key: String) -> MMCharacter {
-        let file = "\(NPCCardPath)/\(key)"
-        
-        let json = JSON.read(fromFile: file)!
-        
-        return MMCharacter.deserialize(fromJSON: json)
-    }
+   
     
 //    static func createPVEBattlePlayer(index: Int) -> MMBattlePlayer {
 //        let p2 = MMPlayer(id: "PVE-\(index)")

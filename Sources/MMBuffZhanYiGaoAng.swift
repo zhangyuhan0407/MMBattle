@@ -20,7 +20,7 @@ class MMBuffBingHuan: MMBuff {
         self.remainRound = 2
     }
     
-    func didHit(character: MMCharacter, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
     
@@ -37,13 +37,13 @@ class MMBuffChenMo: MMBuff {
         self.remainRound = 1
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
 }
 
 
-class MMBuffDun: MMBuff, MMCharacterObservable {
+class MMBuffDun: MMBuff, MMUnitObservable {
     
     var value: Int {
         didSet {
@@ -72,7 +72,7 @@ class MMBuffDun: MMBuff, MMCharacterObservable {
     }
     
     
-    func onHPChanged(character: MMCharacter, newValue: inout Int, oldValue: Int) {
+    func onHPChanged(character: MMUnit, newValue: inout Int, oldValue: Int) {
         if newValue >= oldValue {
             return
         }
@@ -105,10 +105,10 @@ class MMBuffXianJi: MMBuff {
         self.remainRound = 3
     }
     
-    func willHit(character: MMCharacter, damage: MMDamage) {
+    func willHit(character: MMUnit, damage: MMDamage) {
         character.hp -= value
         
-        character.player?.record.putBeforeFight(character.createCustomAnimationDictionary(type: .changeHP(offset: value)))
+        character.player.record.putBeforeFight(character.createCustomAnimationDictionary(type: .changeHP(offset: value)))
         
     }
 }
@@ -127,7 +127,7 @@ class MMBuffKuChu: MMBuff {
         self.remainRound = 3
     }
     
-    func willHit(character: MMCharacter, damage: MMDamage) {
+    func willHit(character: MMUnit, damage: MMDamage) {
         let realValue: Int
         if character.hasBuff("tongkuwuchang") {
             realValue = value * 2
@@ -137,7 +137,7 @@ class MMBuffKuChu: MMBuff {
         
         character.hp -= realValue
         
-        character.player?.record.putBeforeFight(character.createCustomAnimationDictionary(type: .changeHP(offset: realValue)))
+        character.player.record.putBeforeFight(character.createCustomAnimationDictionary(type: .changeHP(offset: realValue)))
         
     }
     
@@ -154,7 +154,7 @@ class MMBuffTongKuWuChang: MMBuff {
         self.remainRound = 2
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
 }
@@ -171,7 +171,7 @@ class MMBuffXuanYun: MMBuff {
         self.remainRound = 1
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
     
@@ -193,11 +193,11 @@ class MMBuffHuiChun: MMBuff {
         self.remainRound = 3
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         
         character.hp += value
 
-        character.player?.record.putAfterFight(character.createCustomAnimationDictionary(type: .changeHP(offset: value)))
+        character.player.record.putAfterFight(character.createCustomAnimationDictionary(type: .changeHP(offset: value)))
         
         self.remainRound -= 1
     }
@@ -220,11 +220,11 @@ class MMBuffYeXingShengZhang: MMBuff {
         self.remainRound = 3
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         
         character.hp += value
         
-        character.player?.record.putAfterFight(character.createCustomAnimationDictionary(type: .changeHP(offset: value)))
+        character.player.record.putAfterFight(character.createCustomAnimationDictionary(type: .changeHP(offset: value)))
         
         self.remainRound -= 1
     }
@@ -243,7 +243,7 @@ class MMBuffZhiSiDaJi: MMBuff {
         self.remainRound = 2
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
     
@@ -272,7 +272,7 @@ class MMBuffPoJia: MMBuff {
         character?.def += value
     }
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
     
@@ -304,10 +304,22 @@ class MMBuffShiXue: MMBuff {
     }
     
     
-    func didHit(character: MMCharacter, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
+    func didHit(character: MMUnit, ofPlayer player: MMBattlePlayer, mainTargetDamage damage: MMDamage) {
         self.remainRound -= 1
     }
     
+}
+
+
+class MMBuffEmoXingTai: MMBuff {
+    override init() {
+        super.init()
+        self.key = "emoxingtai"
+        self.id = 11
+        self.name = "恶魔形态"
+        self.defaultRound = 3
+        self.remainRound = 3
+    }
 }
 
 

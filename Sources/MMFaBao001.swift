@@ -9,7 +9,7 @@
 import Foundation
 
 
-class MMFaBao001: MMFabaoModel, MMCharacterObservable {
+class MMFaBao001: MMFabaoModel, MMUnitObservable {
     
     var key: String = "001"
     var id: Int = 1
@@ -34,12 +34,12 @@ class MMFaBao001: MMFabaoModel, MMCharacterObservable {
     var fantanfashu: Int = 0
     
     
-    func onHPChanged(character: MMCharacter, newValue: inout Int, oldValue: Int) {
+    func onHPChanged(character: MMUnit, newValue: inout Int, oldValue: Int) {
         
-        for char in character.player!.aliveCharacters {
+        for char in character.player.aliveCharacters {
             char.hp += char.maxHP.multiply(0.45)
             
-            let dict: [String: Any] = ["playerkey": character.player!.key,
+            let dict: [String: Any] = ["playerkey": character.player.key,
                                         "cardkey": character.key,
                                         "cellid": character.position,
                                         "reason": "changehp",
@@ -48,7 +48,7 @@ class MMFaBao001: MMFabaoModel, MMCharacterObservable {
                                         "offsethp": char.maxHP.multiply(0.45)]
             
             
-            character.player?.battle?.record.putAfterFight(dict)
+            character.player.battle.record.putAfterFight(dict)
         }
     }
     

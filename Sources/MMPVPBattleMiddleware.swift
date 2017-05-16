@@ -55,7 +55,7 @@ class MMPVPBattleMiddleware: RouterMiddleware {
             if battle.currentRound == 0 {
                 let ai = MMBattlePlayerAI()
                 battle.receiveCommand(playerKey: ai.key, characters: ai.characters, guardian: nil)
-                ai.battle = battle
+                ai._battle = battle
             } else {
                 let chars = MMBattlePlayerAI.rechargeCharacters(round: battle.currentRound)
                 battle.receiveCommand(playerKey: "ai", characters: chars, guardian: nil)

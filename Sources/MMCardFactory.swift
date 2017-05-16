@@ -40,9 +40,14 @@ class MMCardFactory {
         cards.updateValue(DZZhanDou(), forKey: "dz_zhandou")
         cards.updateValue(DZMinRui(), forKey: "dz_minrui")
         
+        cards.updateValue(XDMao(), forKey: "xd_mao")
+        cards.updateValue(XDXiong(), forKey: "xd_xiong")
+        cards.updateValue(XDNiao(), forKey: "xd_niao")
+        cards.updateValue(XDZhiLiao(), forKey: "xd_zhiliao")
+        
         cards.updateValue(SMYuanSu(), forKey: "sm_yuansu")
         cards.updateValue(SMZengQiang(), forKey: "sm_zengqiang")
-        //cards.updateValue(smzhi(), forKey: "sm_zhiliao")
+        cards.updateValue(SMZhiLiao(), forKey: "sm_zhiliao")
         
         cards.updateValue(LRShengCun(), forKey: "lr_shengcun")
         cards.updateValue(LRSheJi(), forKey: "lr_sheji")
@@ -52,16 +57,16 @@ class MMCardFactory {
         cards.updateValue(ZSKuangBao(), forKey: "zs_kuangbao")
         cards.updateValue(ZSFangYu(), forKey: "zs_fangyu")
         
-        cards.updateValue(QSShenSheng(), forKey: "qs_shensheng")
+        cards.updateValue(QSShenSheng(), forKey: "qs_zhiliao")
         cards.updateValue(QSFangYu(), forKey: "qs_fangyu")
         cards.updateValue(QSChengJie(), forKey: "qs_chengjie")
         
         
         
-        cards.updateValue(ZSFangYu(), forKey: "npc_zs_1")
-        cards.updateValue(LRSheJi(), forKey: "npc_lr_1")
-        cards.updateValue(FSHuoYan(), forKey: "npc_fs_1")
-        cards.updateValue(DZCiSha(), forKey: "npc_dz_1")
+        cards.updateValue(MMNPC_ZS(card: "zs", level: 1), forKey: "npc_zs_1")
+        cards.updateValue(MMNPC_LR(card: "lr", level: 1), forKey: "npc_lr_1")
+        cards.updateValue(MMNPC_FS(card: "fs", level: 1), forKey: "npc_fs_1")
+        cards.updateValue(MMNPC_DZ(card: "dz", level: 1), forKey: "npc_dz_1")
         
         
         cards.updateValue(SMZengQiang(), forKey: "npc_boss_101")
@@ -72,6 +77,22 @@ class MMCardFactory {
         cards.updateValue(SMZengQiang(), forKey: "npc_boss_106")
         cards.updateValue(SMZengQiang(), forKey: "npc_boss_107")
         
+        
+        do {
+            let files = try FileManager.default.contentsOfDirectory(atPath: NPCCardPath)
+            for file in files {
+                if file.contains(".") {
+                    continue
+                }
+                let json = JSON.read(fromFile: "\(NPCCardPath)/\(file)")!
+                _ = deserilize(fromJSON: json)
+            }
+        } catch {
+            fatalError()
+        }
+        
+        
+        
     }
     
     
@@ -79,18 +100,19 @@ class MMCardFactory {
     
     func deserilize(fromJSON json: JSON) -> MMCard {
         
-        let card = cards[json["key"].string!]!
+        let card = cards[json["key"].stringValue]!
 
         
-        card.id     = json["id"].int!
-        card.name   = json["key"].string!
+        card.id     = json["id"].intValue
+        card.name   = json[kName].stringValue
         
-        card.attackRule = AttackRule.deserilize(fromString: json["attackrule"].string!)
-        card.attackArea = AttackArea.deserilize(fromString: json["attackarea"].string!)
-        card.attackType = AttackType.deserilize(fromString: json["attacktype"].string!)
+//        card.attackRule = AttackRule.deserilize(fromString: json["attackrule"].string!)
+//        card.attackArea = AttackArea.deserilize(fromString: json["attackarea"].string!)
+        card.attackType = MMAttackType(rawValue: json[kAttackType].string ?? "none")!
         
-        card.skill1Factor = json["skill1factor"].float ?? 1.0
-        card.skill2Factor = json["skill2factor"].float ?? 1.0
+        card.skill1Factor = json["skill1factor"].intValue
+        card.skill2Factor = json["skill2factor"].intValue
+        
         
         card.sp     = json["sp"].int ?? 3
         card.hp     = json["hp"].int ?? 100

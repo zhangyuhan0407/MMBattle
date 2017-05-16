@@ -21,8 +21,8 @@ class MMPVPBattleManager {
     static func create(p1: MMBattlePlayer, p2: MMBattlePlayer) -> MMPVPBattle {
 
         let battle = MMPVPBattle(type: "PVP_\(p1.key)_\(p2.key)", p1: p1, p2: p2)
-        p1.battle = battle
-        p2.battle = battle
+        p1._battle = battle
+        p2._battle = battle
         
         MMPVPBattleManager.battles.append(battle)
         

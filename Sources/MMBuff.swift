@@ -10,7 +10,12 @@ import Foundation
 import OCTJSON
 
 
-class MMBuff: MMCharacterFlow {
+enum BuffType: String {
+    case chenmo
+}
+
+
+class MMBuff: MMUnitFlow {
     
     var key: String = "DEFAULT"
     var id: Int = 0
@@ -18,7 +23,7 @@ class MMBuff: MMCharacterFlow {
     
     var userinfo: [String: Any]?
     
-    weak var character: MMCharacter?
+    weak var character: MMUnit?
     
     var defaultRound = 1 {
         didSet {

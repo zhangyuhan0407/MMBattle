@@ -19,17 +19,15 @@ class MMCard {
     var id: Int!
     var name: String!
     
-    var attackRule: AttackRule = .melee
-    var attackArea: AttackArea = .single
-    var attackType: AttackType = .physics
+//    var attackRule: AttackRule = .melee
+//    var attackArea: AttackArea = .single
+    var attackType: MMAttackType = .none
     
     
-    var skill1Factor: Float = 0.5
-    var skill2Factor: Float = 1.5
+    var skill1Factor: Int = 50
+    var skill2Factor: Int = 150
     
-    
-    var ball = 0
-    var category = 0
+
     
     var sp: Int = 5
     var hp: Int = 100
@@ -54,150 +52,77 @@ class MMCard {
     }
     
     
-    
-    func willHit(character: MMCharacter, damage: MMDamage) {
-
+    func createSkill(character: MMUnit) -> BTSkill {
+        let skill = BTSkill(unit: character)
+        if character.sp >= self.sp {
+            skill.index = 2
+        } else {
+            skill.index = 1
+        }
+        skill.type = character.card.attackType
+        return skill
     }
     
     
-    func hit(character: MMCharacter, damage: MMDamage, allTargets: [MMCharacter]) {
-        if damage.skillIndex == 1 {
+    func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+        return nil
+    }
+    
+    
+    func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
+        return []
+    }
+    
+    
+    
+    func willHit(character: MMUnit) {
+
+    }
+
+    
+    
+    func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        if skill.index == 1 {
+            damage.value = damage.value * skill1Factor / 100
+        } else if skill.index == 2 {
+            damage.value = damage.value * skill2Factor / 100
+        }
+    }
+    
+    
+    func willBehit(character: MMUnit, skill: BTSkill) {
+        
+    }
+    
+    
+    func behit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        character.hp -= damage.value
+    }
+    
+    
+    func didBehit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        
+    }
+    
+    
+    //zyh!! shanbi do not increase sp
+    func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        if skill.index == 1 {
             character.sp += 1
-        } else {
+        } else if skill.index == 2 {
             character.sp = 0
         }
-
         
-//        if damage.skillIndex == 2 {
-            for tar in allTargets {
-                tar.sp += 1
-            }
-//        }
-        
-    }
-    
-    
-    func willBehit(character: MMCharacter, damage: MMDamage) {
-        
-    }
-    
-    
-    func behit(character: MMCharacter, damage: MMDamage) {
-        guard let destination = damage.destination else {
-            Logger.error("")
-            return
+        mainDamage?.destination.sp += 1
+        for damage in sideDamages {
+            damage.destination.sp += 1
         }
         
-        
-        _ = makeCalculatedValue(damage: damage, char1: damage.source, char2: destination)
-        
-        
-        destination.hp -= damage.value
-        
-    }
-    
-    
-    func didBehit(character: MMCharacter, damage: MMDamage) {
-        
-    }
-    
-    
-    func didHit(character: MMCharacter, mainTargetDamage damage: MMDamage, allTargetDamages: [MMDamage]) {
-        if damage.skillIndex == 2 {
-            damage.ball = character.card.ball
-        }
     }
     
     
     
-    
-    
-    
-    
-//    func willHit1(character: MMCharacter, player: MMBattlePlayer) {
-//        
-//    }
-//    
-//    func hit1(character: MMCharacter, player: MMBattlePlayer) -> MMDamage {
-//        
-//    }
-//    
-//    func didHit1(character: MMCharacter, player: MMBattlePlayer, mainDamage: MMDamage, allDamages damages: [MMDamage]) {
-//        
-//    }
-//    
-//    
-//    func willBehit(character: MMCharacter, player: MMBattlePlayer, damage: MMDamage) {
-//        
-//    }
-//    
-//    func behit(character: MMCharacter, player: MMBattlePlayer, damage: MMDamage) {
-//        
-//    }
-//    
-//    func didBehit(character: MMCharacter, player: MMBattlePlayer, damage: MMDamage) {
-//        
-//    }
     
 }
-
-
-
-
-//struct MMCardType: MMCardModel {
-//    
-//    var key: String
-//    var id: Int
-//    var name: String
-//    
-//    var attackRule: AttackRule //默认大招小招攻击规则相同
-//    var attackArea: AttackArea //大招攻击范围，默认小招攻击范围为.single
-//    var attackType: AttackType
-//    
-//    
-//    var skill1Factor: Float
-//    var skill2Factor: Float
-//    
-//    
-//    var sp: Int
-//    var hp: Int
-//    var atk: Int
-//    var def: Int
-//    var mag: Int
-//    var spd: Int
-//    
-//    var baoji: Int
-//    var shanbi: Int
-//    var mingzhong: Int
-//    var gedang: Int
-//    
-//    
-//    var zaisheng: Int
-//    var xixue: Int
-//    var fantanwuli: Int
-//    var fantanfashu: Int
-//    
-//    init() {
-//        
-//    }
-//    
-//    static func deserilize(fromJSON json: JSON) -> MMCardType? {
-//        var card = MMCardType()
-//        card.key    = json["key"].string!
-//        card.id     = json["id"].int!
-//        card.name   = json["name"].string!
-//        card.attackRule = AttackRule.deserilize(fromString: json["attackrule"].string!)
-//        card.attackArea = AttackArea.deserilize(fromString: json["attackarea"].string!)
-//        card.attackType = AttackType.deserilize(fromString: json["attacktype"].string!)
-//        
-//        
-//    }
-//    
-//}
-
-
-
-
-
 
 

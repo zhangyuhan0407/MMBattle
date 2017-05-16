@@ -30,6 +30,7 @@ class MMPVEBattleMiddleware: RouterMiddleware {
             return
         }
         
+        Logger.info("\(json)")
         
         guard let charJSONs = json[kCharacters].array
         else {
@@ -38,18 +39,20 @@ class MMPVEBattleMiddleware: RouterMiddleware {
         }
         
         
-        let characters = MMUnit.deserialize(fromJSONs: charJSONs)
+        let p1Units = MMUnit.deserialize(fromJSONs: charJSONs)
         
-        let player1 = MMBattlePlayerFactory.createBattlePlayer(player: playerKey, characters: characters)
+        let player1 = MMBattlePlayerFactory.createBattlePlayer(player: playerKey, characters: p1Units)
         
-        let pveUnits = MMPVEFactory.createPVEUnits(index: battleID)
+        let p2Units = MMPVEFactory.createPVEUnits(index: battleID)
         
-        let player2 = MMBattlePlayerFactory.createPVEPlayer(forPlayer: playerKey, units: pveUnits)
+        let player2 = MMBattlePlayerFactory.createPVEPlayer(forPlayer: playerKey, units: p2Units)
         
         
         let battle = MMBattleFactory.createBattle(type: "\(battleID)", p1: player1, p2: player2)
 
         battle.start()
+        
+        Logger.debug("\(battle.record.json)")
         
         try response.send(OCTResponse.Succeed(data: battle.record.json)).end()
             

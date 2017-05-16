@@ -15,29 +15,29 @@ import OCTFoundation
 
 
 
-func makeAttackValue(forCharacter char: MMCharacter) -> Int {
-    return char.atk
+func makeAttackValue(forCharacter char: MMUnit) -> Int {
+    return char.atk / 3
 }
 
 
-func makeMagicValue(forCharacter char: MMCharacter) -> Int {
-    return char.mag
+func makeMagicValue(forCharacter char: MMUnit) -> Int {
+    return char.mag / 3
 }
 
 
-func makeRealValue(forCharacter char: MMCharacter) -> Int {
-    return char.atk
+func makeRealValue(forCharacter char: MMUnit) -> Int {
+    return char.atk / 3
 }
 
 
-func makeHealValue(forCharacter char: MMCharacter) -> Int {
+func makeHealValue(forCharacter char: MMUnit) -> Int {
     return -char.mag
 }
 
 
 
 
-func makeMingZhong(char1: MMCharacter, char2: MMCharacter) -> Bool {
+func makeMingZhong(char1: MMUnit, char2: MMUnit) -> Bool {
     
     if char1.mingzhong > char2.shanbi {
         return true
@@ -53,7 +53,7 @@ func makeMingZhong(char1: MMCharacter, char2: MMCharacter) -> Bool {
     
 }
 
-func makeBaoJi(char1: MMCharacter, char2: MMCharacter) -> Bool {
+func makeBaoJi(char1: MMUnit, char2: MMUnit) -> Bool {
     let random = Int.random()
     if char1.baoji > random {
         return true
@@ -62,7 +62,7 @@ func makeBaoJi(char1: MMCharacter, char2: MMCharacter) -> Bool {
     return false
 }
 
-func makeGeDang(char1: MMCharacter, char2: MMCharacter) -> Bool {
+func makeGeDang(char1: MMUnit, char2: MMUnit) -> Bool {
     let random = Int.random()
     if char1.gedang > random {
         return true
@@ -79,7 +79,7 @@ func makeGeDang(char1: MMCharacter, char2: MMCharacter) -> Bool {
 
 
 
-func makeCalculatedValue(damage: MMDamage, char1: MMCharacter, char2: MMCharacter) -> MMDamage {
+func makeCalculatedValue(damage: MMDamage, char1: MMUnit, char2: MMUnit) -> MMDamage {
     
 //    if damage.type == .physics {
 //        damage.value -= char2.def
@@ -91,9 +91,9 @@ func makeCalculatedValue(damage: MMDamage, char1: MMCharacter, char2: MMCharacte
     
     
     //固定伤害
-    if damage.type == .real {
-        return damage
-    }
+//    if damage.type == .real {
+//        return damage
+//    }
     
     
     
@@ -104,15 +104,15 @@ func makeCalculatedValue(damage: MMDamage, char1: MMCharacter, char2: MMCharacte
     
     
     //治疗伤害
-    if damage.type == .heal {
-        if makeBaoJi(char1: char1, char2: char2) {
-            damage.value = damage.value.multiply(1.4)
-        }
-        
-        damage.value -= char2.hp.multiply(0.05)
-        
-        return damage
-    }
+//    if damage.type == .heal {
+//        if makeBaoJi(char1: char1, char2: char2) {
+//            damage.value = damage.value.multiply(1.4)
+//        }
+//        
+//        damage.value -= char2.hp.multiply(0.05)
+//        
+//        return damage
+//    }
     
    
     //物理伤害
@@ -142,12 +142,12 @@ func makeCalculatedValue(damage: MMDamage, char1: MMCharacter, char2: MMCharacte
             damage.value = 0
         }
         
-        let factor: Float
-        if damage.skillIndex == 1 {
-            factor = char1.card.skill1Factor
-        } else {
-            factor = char1.card.skill2Factor
-        }
+        let factor: Float = 1
+//        if damage.skillIndex == 1 {
+//            factor = char1.card.skill1Factor
+//        } else {
+//            factor = char1.card.skill2Factor
+//        }
         
         damage.value = damage.value.multiply(factor)
         
@@ -157,7 +157,7 @@ func makeCalculatedValue(damage: MMDamage, char1: MMCharacter, char2: MMCharacte
     
     
     //法术伤害
-    if damage.type == .magic {
+    if damage.type != .physics {
 //        damage.value -= char2.mag.multiply(0.5)
         
         if makeBaoJi(char1: char1, char2: char2) {
@@ -170,12 +170,12 @@ func makeCalculatedValue(damage: MMDamage, char1: MMCharacter, char2: MMCharacte
             damage.value = 0
         }
         
-        let factor: Float
-        if damage.skillIndex == 1 {
-            factor = char1.card.skill1Factor
-        } else {
-            factor = char1.card.skill2Factor
-        }
+        let factor: Float = 1
+//        if damage.skillIndex == 1 {
+//            factor = char1.card.skill1Factor
+//        } else {
+//            factor = char1.card.skill2Factor
+//        }
         
         damage.value = damage.value.multiply(factor)
         

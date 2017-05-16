@@ -3,8 +3,6 @@
 
 import Foundation
 import Kitura
-import LoggerAPI
-import HeliumLogger
 import OCTJSON
 import OCTFoundation
 
@@ -91,7 +89,7 @@ router.get("battles") { (request, response, next) in
 
 
 // Using an implementation for a Logger
-Log.logger = HeliumLogger()
+//Log.logger = HeliumLogger()
 
 
 // Add HTTP Server to listen on port 8090

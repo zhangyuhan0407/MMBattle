@@ -9,34 +9,34 @@
 import Foundation
 
 
-protocol MMCharacterFlow {
+protocol MMUnitFlow {
     
-    func willHit(character: MMCharacter, damage: MMDamage)
+    func willHit(character: MMUnit)
     
-    func willBehit(character: MMCharacter, damage: MMDamage)
+    func willBehit(character: MMUnit)
     
-    func didBehit(character: MMCharacter, damage: MMDamage)
+    func didBehit(character: MMUnit, damage: MMDamage)
     
-    func didHit(character: MMCharacter, mainTargetDamage damage: MMDamage)
+    func didHit(character: MMUnit, damage: MMDamage)
 }
 
 
-extension MMCharacterFlow {
+extension MMUnitFlow {
     
-    func willHit(character: MMCharacter, damage: MMDamage) { }
+    func willHit(character: MMUnit) { }
     
-    func willBehit(character: MMCharacter, damage: MMDamage) { }
+    func willBehit(character: MMUnit) { }
     
-    func didBehit(character: MMCharacter, damage: MMDamage) { }
+    func didBehit(character: MMUnit, damage: MMDamage) { }
     
-    func didHit(character: MMCharacter, mainTargetDamage damage: MMDamage) { }
+    func didHit(character: MMUnit, damage: MMDamage) { }
 }
 
 
 
 
-protocol MMCharacterObservable {
-    func onHPChanged(character: MMCharacter, newValue: inout Int, oldValue: Int)
+protocol MMUnitObservable {
+    func onHPChanged(character: MMUnit, newValue: inout Int, oldValue: Int)
 }
 
 
