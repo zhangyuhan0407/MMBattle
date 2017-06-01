@@ -27,7 +27,12 @@ extension MMBattlePlayer {
         let skill = char.createSkill()
         self.record.putSkill(skill: skill)
         
+        
+        
+        //跳过所有hit
         if skill.index == 0 {
+            char.didHit(skill: skill, mainDamage: nil, sideDamages: [])
+            self.record.pushFightLog()
             return
         }
         
@@ -40,6 +45,7 @@ extension MMBattlePlayer {
             char.hit(skill: skill, damage: mainDamage!)
             mainTarget.behit(skill: skill, damage: mainDamage!)
             mainTarget.didBehit(skill: skill, damage: mainDamage!)
+            char.card.valueHandler(character: char, skill: skill, damage: mainDamage!)
             mainDamage?.pin()
             self.record.putMainDamage(damage: mainDamage!)
         }
@@ -49,12 +55,12 @@ extension MMBattlePlayer {
         let sideDamages = char.createSideTargetDamages(skill: skill)
         for damage in sideDamages {
             let target = damage.destination!
+            char.hit(skill: skill, damage: damage)
             target.behit(skill: skill, damage: damage)
             target.didBehit(skill: skill, damage: damage)
+            char.card.valueHandler(character: char, skill: skill, damage: damage)
             damage.pin()
         }
-        
-        
         self.record.putSideDamages(damages: sideDamages)
         
         

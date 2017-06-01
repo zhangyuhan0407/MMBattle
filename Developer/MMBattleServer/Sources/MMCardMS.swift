@@ -36,7 +36,7 @@ class MSShenSheng: MMCard {
         
         return character.player.aliveCharacters.map { char in
             let damage = character.createDamage()
-            damage.destination = character
+            damage.destination = char
             return damage
         }
         
@@ -44,27 +44,19 @@ class MSShenSheng: MMCard {
     
     
     override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
-        if skill.index == 1 {
-            damage.value = 0
-        }
+        super.hit(character: character, skill: skill, damage: damage)
+        
+        damage.value = -damage.value
     }
+    
     
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
         
         if skill.index == 1 {
-            character.sp += 1
+            
         } else {
             character.sp = 0
-        }
-        
-        
-        for damage in sideDamages {
-            if damage.destination.key == character.key {
-                continue
-            }
-            damage.destination.sp += 1
-            character.record.putAfterFight(damage.destination.createCustomAnimationDictionary(type: CustomAnimation.changeSP))
         }
         
     }
@@ -102,14 +94,23 @@ class MSJieLv: MMCard {
     
     
     override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        super.hit(character: character, skill: skill, damage: damage)
         
-        damage.destination.sp += 10
         
-        if skill.index == 1 {
-            damage.value = 0
+        
+        if skill.index == 2 {
+            damage.userInfo["healvalue"] = damage.value
         }
         
+        damage.value = 0
     }
+    
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        damage.destination.sp += 10
+    }
+    
+    
     
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
@@ -117,8 +118,8 @@ class MSJieLv: MMCard {
             character.sp += 1
         } else {
             character.sp = 0
-            mainDamage!.destination.addBuff(MMBuffDun(value: mainDamage!.value))
-            character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .changeSP))
+            mainDamage!.destination.addBuff(MMBuffDun(value: mainDamage!.userInfo["healvalue"] as! Int))
+            character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .addBuff(key: "dun")))
         }
     }
     
@@ -163,17 +164,31 @@ class MSAnYing: MMCard {
     }
     
     
-    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
-        let damage = mainDamage!
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
         if damage.isShanbi { return }
+        
+        
+        damage.destination.hp -= damage.value
         
         if skill.index == 1 {
             damage.destination.sp -= 1
+        } else {
+            damage.userInfo["destsp"] = damage.destination.sp
+            damage.destination.sp = 0
+        }
+        
+    }
+    
+    
+    
+    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        let damage = mainDamage!
+        if damage.isShanbi { return }
+//
+        if skill.index == 1 {
             character.sp += 1
         } else {
-            let sp = damage.destination.sp
-            character.sp = sp
-            damage.destination.sp = 0
+            character.sp = mainDamage!.userInfo["destsp"] as! Int
         }
     }
     

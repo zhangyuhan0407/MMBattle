@@ -59,16 +59,17 @@ final class MMUnit: JSONDeserializable {
                 }
             }
             
-            if temp < 0 {
-                temp = 0
-            } else if temp > maxHP {
-                temp = maxHP
-            }
             
             for ob in self.observer {
                 ob.onHPChanged(character: self, newValue: &temp, oldValue: _hp)
             }
             
+            
+            if temp < 0 {
+                temp = 0
+            } else if temp > maxHP {
+                temp = maxHP
+            }
             
             self._hp = temp
             
@@ -89,11 +90,11 @@ final class MMUnit: JSONDeserializable {
                 }
             }
             
-            if self.hasBuff("chenmo") {
-                if newValue > self._sp {
-                    temp = _sp
-                }
-            }
+//            if self.hasBuff("chenmo") {
+//                if newValue > self._sp {
+//                    temp = _sp
+//                }
+//            }
             
             if temp < 0 {
                 temp = 0
@@ -141,7 +142,9 @@ final class MMUnit: JSONDeserializable {
     static func deserialize(fromJSON json: JSON) -> MMUnit {
         
         let char = MMUnit()
-        char.card = MMCardFactory.sharedInstance.cards[json[kCardKey].string ?? json[kKey].stringValue]!
+        char.card = MMCardFactory.sharedInstance.findCard(key: json[kCardKey].string ?? json[kKey].stringValue)
+        
+        
         char.position = json[kPosition].int ?? 0
         
         char.maxHP = json[kMaxHP].int!
@@ -151,18 +154,18 @@ final class MMUnit: JSONDeserializable {
         char.sp = json[kSP].int ?? 0
         
         
-        char.atk = json[kATK].int!
-        char.mag = json[kMAG].int!
+        char.atk = json[kATK].int ?? 0
+        char.mag = json[kMAG].int ?? 0
         char.def = json[kDEF].int!
         char.spd = json[kSPD].int!
         
-        char.baoji = json[kBaoJi].int!
-        char.mingzhong = json[kMingZhong].int!
-        char.shanbi = json[kShanBi].int!
-        char.gedang = json[kGeDang].int!
+        char.baoji = json[kBaoJi].int ?? 0
+        char.mingzhong = json[kMingZhong].int ?? 0
+        char.shanbi = json[kShanBi].int ?? 0
+        char.gedang = json[kGeDang].int ?? 0
         
-        char.xixue = json[kXiXue].int!
-        char.zaisheng = json[kZaiSheng].int!
+        char.xixue = json[kXiXue].int ?? 0
+        char.zaisheng = json[kZaiSheng].int ?? 0
         char.fantanwuli = json[kFanTanWuLi].int ?? 0
         char.fantanfashu = json[kFanTanFaShu].int ?? 0
         

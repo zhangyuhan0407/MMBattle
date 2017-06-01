@@ -13,7 +13,7 @@ import OCTFoundation
 
 class MMCardFactory {
     
-    var cards: [String: MMCard] = [:]
+    private var cards: [String: MMCard] = [:]
     
     static var sharedInstance = MMCardFactory()
     
@@ -22,7 +22,52 @@ class MMCardFactory {
     }
     
     
-    func reload() {
+    func findCard(key: String) -> MMCard {
+        if let card = cards[key] {
+            return card
+        }
+        
+        
+        let card: MMCard
+        if key.contains("fs") {
+            card = MMNPC_FS(key: key)
+        } else if key.contains("ms") {
+            card = MMNPC_MS()
+        } else if key.contains("ss") {
+            card = MMNPC_SS(key: key)
+        } else if key.contains("dz") {
+            card = MMNPC_DZ(key: key)
+        } else if key.contains("xd") {
+            card = MMNPC_XD(key: key)
+        } else if key.contains("sm") {
+            card = MMNPC_SM()
+        } else if key.contains("lr") {
+            card = MMNPC_LR(key: key)
+        } else if key.contains("zs") {
+            card = MMNPC_ZS(key: key)
+        } else if key.contains("qs") {
+            card = MMNPC_QS(key: key)
+        } else {
+            card = SMZengQiang()
+        }
+        
+        
+        cards.updateValue(card, forKey: key)
+        
+        loadCardProperties(fromJSON: JSON.read(fromFile: "\(UnitPath)/\(key)")!)
+        
+        return card
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    private func reload() {
         
         cards.updateValue(FSBingShuang(), forKey: "fs_bingshuang")
         cards.updateValue(FSHuoYan(), forKey: "fs_huoyan")
@@ -62,38 +107,14 @@ class MMCardFactory {
         cards.updateValue(QSChengJie(), forKey: "qs_chengjie")
         
         
-        
-        cards.updateValue(MMNPC_ZS(card: "zs", level: 1), forKey: "npc_zs_1")
-        cards.updateValue(MMNPC_LR(card: "lr", level: 1), forKey: "npc_lr_1")
-        cards.updateValue(MMNPC_FS(card: "fs", level: 1), forKey: "npc_fs_1")
-        cards.updateValue(MMNPC_DZ(card: "dz", level: 1), forKey: "npc_dz_1")
-        
-        cards.updateValue(MMNPC_ZS(card: "zs", level: 1), forKey: "npc_ss_1")
-        cards.updateValue(MMNPC_LR(card: "lr", level: 1), forKey: "npc_ms_1")
-        cards.updateValue(MMNPC_FS(card: "fs", level: 1), forKey: "npc_xd_1")
-        cards.updateValue(MMNPC_DZ(card: "dz", level: 1), forKey: "npc_sm_1")
-        cards.updateValue(MMNPC_DZ(card: "dz", level: 1), forKey: "npc_qs_1")
-        
-        
-        
-        
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_101")
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_102")
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_103")
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_104")
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_105")
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_106")
-        cards.updateValue(SMZengQiang(), forKey: "npc_boss_107")
-        
-        
         do {
-            let files = try FileManager.default.contentsOfDirectory(atPath: NPCCardPath)
+            let files = try FileManager.default.contentsOfDirectory(atPath: CardPath)
             for file in files {
                 if file.contains(".") {
                     continue
                 }
-                let json = JSON.read(fromFile: "\(NPCCardPath)/\(file)")!
-                _ = deserilize(fromJSON: json)
+                let json = JSON.read(fromFile: "\(CardPath)/\(file)")!
+                loadCardProperties(fromJSON: json)
             }
         } catch {
             fatalError()
@@ -106,7 +127,8 @@ class MMCardFactory {
     
     
     
-    func deserilize(fromJSON json: JSON) -> MMCard {
+    @discardableResult
+    private func loadCardProperties(fromJSON json: JSON) -> MMCard {
         
         let card = cards[json["key"].stringValue]!
 
@@ -116,6 +138,7 @@ class MMCardFactory {
         
 //        card.attackRule = AttackRule.deserilize(fromString: json["attackrule"].string!)
 //        card.attackArea = AttackArea.deserilize(fromString: json["attackarea"].string!)
+        
         card.attackType = MMAttackType(rawValue: json[kAttackType].string ?? "none")!
         
         card.skill1Factor = json["skill1factor"].intValue
@@ -124,6 +147,8 @@ class MMCardFactory {
         
         card.sp     = json["sp"].int!
         card.hp     = json["hp"].int!
+        
+        
         card.atk    = json["atk"].int ?? 0
         card.def    = json["def"].int ?? 0
         card.mag    = json["mag"].int ?? 0

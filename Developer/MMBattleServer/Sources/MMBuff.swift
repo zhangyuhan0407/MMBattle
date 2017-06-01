@@ -12,6 +12,7 @@ import OCTJSON
 
 enum BuffType: String {
     case chenmo
+    
 }
 
 
@@ -32,6 +33,8 @@ class MMBuff: MMUnitFlow {
             }
         }
     }
+    
+    
     var remainRound: Int = 1 {
         didSet {
             if remainRound <= 0 {
@@ -47,12 +50,30 @@ class MMBuff: MMUnitFlow {
     
     
     func removeFromCharacter() {
-        self.character?.removeBuff(self)
+        character!.record.putBeforeFight(character!.createCustomAnimationDictionary(type: .removeBuff(key: self.key)))
+        self.character!.removeBuff(self)
     }
     
     
     static func deserialize(fromJSON json: JSON) -> MMBuff {
         return MMBuff()
+    }
+    
+    
+    
+    func willHit(character: MMUnit) {
+        self.remainRound -= 1
+    }
+    
+    
+    func willBehit(character: MMUnit, skill: BTSkill) { }
+    
+    
+    func didBehit(character: MMUnit, skill: BTSkill, damage: MMDamage) { }
+    
+    
+    func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        
     }
     
     

@@ -50,7 +50,7 @@ extension MMUnit {
             return ["playerkey": self.player.key,
                     "cardkey": self.card.key,
                     "cellid": position,
-                    "reason": "remove",
+                    "reason": "removebuff",
                     "buffname": key]
         }
          

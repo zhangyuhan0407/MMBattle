@@ -22,7 +22,7 @@ class MMCard {
 //    var attackRule: AttackRule = .melee
 //    var attackArea: AttackArea = .single
     var attackType: MMAttackType = .none
-    
+    var cls: String = ""
     
     var skill1Factor: Int = 50
     var skill2Factor: Int = 150
@@ -96,13 +96,21 @@ class MMCard {
     
     
     func behit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
-        character.hp -= damage.value
+        
     }
     
     
     func didBehit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
         
     }
+    
+    
+    func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        damage.destination.hp -= damage.value
+        damage.destination.sp += 1
+        
+    }
+    
     
     
     //zyh!! shanbi do not increase sp
@@ -112,12 +120,6 @@ class MMCard {
         } else if skill.index == 2 {
             character.sp = 0
         }
-        
-        mainDamage?.destination.sp += 1
-        for damage in sideDamages {
-            damage.destination.sp += 1
-        }
-        
     }
     
     

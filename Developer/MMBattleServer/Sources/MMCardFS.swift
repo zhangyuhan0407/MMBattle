@@ -59,7 +59,7 @@ class FSAoShu: MMCard {
             character.sp = 0
             
             damage.destination.addBuff(MMBuffChenMo())
-            character.record.putAfterFight(character.createCustomAnimationDictionary(type: .addBuff(key: "chenmo")))
+            character.record.putAfterFight(damage.destination.createCustomAnimationDictionary(type: .addBuff(key: "chenmo")))
         }
         
     }
@@ -162,7 +162,7 @@ class FSBingShuang: MMCard {
             character.sp = 0
             for damage in sideDamages {
                 damage.destination.addBuff(MMBuffBingHuan())
-                character.record.putAfterFight(character.createCustomAnimationDictionary(type: .addBuff(key: "binghuan")))
+                character.record.putAfterFight(damage.destination.createCustomAnimationDictionary(type: .addBuff(key: "binghuan")))
             }
         }
         

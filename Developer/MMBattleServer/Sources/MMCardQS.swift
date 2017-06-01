@@ -9,67 +9,6 @@
 import Foundation
 
 
-//class MMFengHou: MMCard {
-//    
-//    override init() {
-//        super.init()
-//        
-//        self.key = "fenghou"
-//        self.id = 7
-//        self.name = "风后"
-//        
-//        self.attackRule = .melee
-//        self.attackArea = .single
-//        self.attackType = .physics
-//        
-//        
-//        self.ball = Ball.tu.rawValue
-//        self.category = CharacterCategory.help.rawValue
-//        
-//        
-//        
-//        self.sp = 1
-//        self.hp = 100
-//        self.atk = 40
-//        self.def = 30
-//        self.mag = 0
-//        self.spd = 40
-//        
-//    }
-//    
-//    
-//    override func didHit(character: MMCharacter, mainTargetDamage damage: MMDamage, allTargetDamages: [MMDamage]) {
-//        super.didHit(character: character, mainTargetDamage: damage, allTargetDamages: allTargetDamages)
-//        
-//        
-//        let player = character.player!
-//        
-//        
-//        if damage.skillIndex == 2 {
-//            for char in player.aliveCharacters {
-//                if char != character {
-//                    char.sp += 1
-//                    player.battle!.record.putAfterFight(char.createCustomAnimationDictionary(type: .changeSP))
-//                }
-//                
-//                char.addBuff(MMBuffShiXue())
-//                player.battle?.record.putAfterFight(char.createCustomAnimationDictionary(type: .addBuff(key: "shixue")))
-//                
-//            }
-//        } else {
-//            let cells = AttackArea.find(position: character.position, area: .nineCube)
-//            let targets = player.findCharacters(inCells: cells)
-//            for char in targets {
-//                char.sp += 1
-//                player.battle!.record.putAfterFight(char.createCustomAnimationDictionary(type: .changeSP))
-//            }
-//        }
-//    }
-//    
-//}
-
-
-
 class QSShenSheng: MMCard {
     
     override init() {
@@ -98,15 +37,25 @@ class QSShenSheng: MMCard {
     }
     
     
+    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        super.hit(character: character, skill: skill, damage: damage)
+        
+        damage.value = -damage.value
+    }
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        damage.destination.hp -= damage.value
+    }
+    
+    
+    
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
         super.didHit(character: character, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
         
-        if let buff = mainDamage!.destination.buffs.last {
-            mainDamage!.destination.removeBuff(buff)
-            character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .removeBuff(key: buff.key)))
-        }
-        
-        
+//        if let buff = mainDamage!.destination.buffs.last {
+//            mainDamage!.destination.removeBuff(buff)
+//            character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .removeBuff(key: buff.key)))
+//        }
     }
     
     

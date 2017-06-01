@@ -11,6 +11,8 @@ import Foundation
 
 class MMFaBao001: MMFabaoModel, MMUnitObservable {
     
+    var observerKey: String = ""
+    
     var key: String = "001"
     var id: Int = 1
     var name: String = "兵法二十四篇"

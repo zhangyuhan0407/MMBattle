@@ -9,7 +9,7 @@
 import Foundation
 
 
-class MMFaBao003: MMFabaoModel, MMUnitFlow {
+class MMFaBao003: MMFabaoModel {
  
     var key: String = "003"
     var id: Int = 3
@@ -34,18 +34,18 @@ class MMFaBao003: MMFabaoModel, MMUnitFlow {
     var fantanfashu: Int = 0
     
     
-    func willHit(character: MMUnit, ofPlayer player: MMBattlePlayer) {
-        character.sp += 1
-        
-        let dict: [String: Any] = ["playerkey": player.key,
-                                   "cardkey": character.key,
-                                   "cellid": character.position,
-                                   "reason": "changesp",
-                                   "sp": character.sp]
-        
-        player.battle.record.putBeforeFight(dict)
-        
-    }
+//    func willHit(character: MMUnit, ofPlayer player: MMBattlePlayer) {
+//        character.sp += 1
+//        
+//        let dict: [String: Any] = ["playerkey": player.key,
+//                                   "cardkey": character.key,
+//                                   "cellid": character.position,
+//                                   "reason": "changesp",
+//                                   "sp": character.sp]
+//        
+//        player.battle.record.putBeforeFight(dict)
+//        
+//    }
     
     
 }

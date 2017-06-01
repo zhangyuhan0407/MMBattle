@@ -163,7 +163,28 @@ extension MMBattlePlayer {
     }
     
     func findUnitsFrontRow() -> [MMUnit] {
-        return []
+        var ret = [MMUnit]()
+        
+        if let ret1 = self.findCharacters(inCells: [0,4,8,12]).first {
+            ret.append(ret1)
+        }
+        
+        if let ret2 = self.findCharacters(inCells: [1,5,9,13]).first {
+            ret.append(ret2)
+        }
+        
+        if let ret3 = self.findCharacters(inCells: [2,6,10,14]).first {
+            ret.append(ret3)
+        }
+        
+        if let ret4 = self.findCharacters(inCells: [3,7,11,15]).first {
+            ret.append(ret4)
+        }
+        
+        
+        return ret
+        
+        
     }
     
     
@@ -247,6 +268,33 @@ extension MMBattlePlayer {
     var randomUnit: MMUnit {
         let random = Int.random()
         return self.aliveCharacters[random % self.aliveCharacters.count]
+    }
+    
+    
+    func randomUnits(count: Int) -> [MMUnit] {
+        if self.aliveCharacters.count <= count {
+            return self.aliveCharacters
+        }
+        
+        var ret = [MMUnit]()
+        while true {
+            let rUnit = randomUnit
+            for u in ret {
+                if u.key == rUnit.key {
+                    break
+                } else {
+                    ret.append(rUnit)
+                }
+            }
+            
+            if ret.count == count {
+                return ret
+            }
+            
+        }
+        
+        
+        
     }
     
     

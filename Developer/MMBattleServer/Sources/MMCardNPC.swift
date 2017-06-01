@@ -12,17 +12,17 @@ import Foundation
 
 class MMNPCUnit: MMCard {
     
-    init(card: String, level: Int) {
+    init(key: String) {
         super.init()
         
-        self.key = "npc_\(card)_\(level)"
+        self.key = key
         self.id = 100
         self.name = "我是一个NPC"
         
         self.attackType = .physics
         
         self.sp = 0
-        self.hp = 100 * level
+        self.hp = 100
         self.atk = 40
         self.def = 30
         self.mag = 0
@@ -53,8 +53,6 @@ class MMNPC_ZS: MMNPCUnit {
 }
 
 
-typealias MMNPC_DZ = MMNPC_ZS
-
 
 class MMNPC_LR: MMNPCUnit {
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
@@ -66,8 +64,8 @@ class MMNPC_LR: MMNPCUnit {
 
 
 class MMNPC_FS: MMNPCUnit {
-    override init(card: String, level: Int) {
-        super.init(card: card, level: level)
+    override init(key: String) {
+        super.init(key: key)
         self.attackType = .fire
     }
     
@@ -80,6 +78,12 @@ class MMNPC_FS: MMNPCUnit {
 
 
 
+typealias MMNPC_DZ = MMNPC_ZS
+typealias MMNPC_MS = MSShenSheng
+typealias MMNPC_SS = MMNPC_FS
+typealias MMNPC_XD = MMNPC_DZ
+typealias MMNPC_SM = SMYuanSu
+typealias MMNPC_QS = MMNPC_ZS
 
 
 

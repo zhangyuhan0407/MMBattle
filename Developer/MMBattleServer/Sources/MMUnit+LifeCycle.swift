@@ -38,34 +38,27 @@ extension MMUnit {
 //        }
         damage.type = self.card.attackType
         
-        print()
-        print()
         
-        switch damage.type {
-        case .physics:
-            damage.value = makeAttackValue(forCharacter: self)
-            print("\(self.key) atk: \(self.atk)")
-//        case .magic:
+//        switch damage.type {
+//        case .physics:
+//            damage.value = makeAttackValue(forCharacter: self)
+//            print("\(self.key) atk: \(self.atk)")
+////        case .magic:
+////            damage.value = makeMagicValue(forCharacter: self)
+////        case .real:
+////            damage.value = makeRealValue(forCharacter: self)
+////        case .heal:
+////            damage.value = makeHealValue(forCharacter: self)
+////        case .demoralize:
+////            damage.value = makeRealValue(forCharacter: self)
+////        case .poisonous:
+////            damage.value = makeMagicValue(forCharacter: self)
+////        case .vulnerable:
+////            damage.value = makeMagicValue(forCharacter: self)
+//        default:
 //            damage.value = makeMagicValue(forCharacter: self)
-//        case .real:
-//            damage.value = makeRealValue(forCharacter: self)
-//        case .heal:
-//            damage.value = makeHealValue(forCharacter: self)
-//        case .demoralize:
-//            damage.value = makeRealValue(forCharacter: self)
-//        case .poisonous:
-//            damage.value = makeMagicValue(forCharacter: self)
-//        case .vulnerable:
-//            damage.value = makeMagicValue(forCharacter: self)
-        default:
-            damage.value = makeMagicValue(forCharacter: self)
-            print("\(self.key) mag: \(self.mag)")
-        }
+//        }
         
-        
-        print("\(self.key) create damage: \(damage.value)")
-        print()
-        print()
         
         return damage
         
@@ -73,7 +66,24 @@ extension MMUnit {
     
     
     func createSkill() -> BTSkill {
-        return card.createSkill(character: self)
+        let skill = card.createSkill(character: self)
+        
+        
+        if self.card.attackType == .physics {
+            if self.hasBuff("binghuan") {
+                skill.index = 0
+            }
+        } else {
+            if self.hasBuff("chenmo") {
+                skill.index = 0
+            }
+        }
+        
+        if self.hasBuff("xuanyun") {
+            skill.index = 0
+        }
+        
+        return skill
     }
     
     
@@ -91,10 +101,10 @@ extension MMUnit {
     
     func willHit() {
         
-        handleZaiSheng()
+//        handleZaiSheng()
         
         for buff in self.buffs {
-//            buff.willHit(character: self, skill: skill)
+            buff.willHit(character: self)
         }
         
         card.willHit(character: self)
@@ -105,14 +115,14 @@ extension MMUnit {
     func hit(skill: BTSkill, damage: MMDamage) {
         
         card.hit(character: self, skill: skill, damage: damage)
-        handleXixue(damage: damage)
+//        handleXixue(damage: damage)
         
     }
     
     
     func didHit(skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
         for buff in self.buffs {
-//            buff.didHit(character: self, skill: skill, damage: damage)
+            buff.didHit(character: self, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
         }
 
         card.didHit(character: self, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
@@ -125,7 +135,7 @@ extension MMUnit {
     func willBehit(skill: BTSkill) {
         
         for buff in self.buffs {
-//            buff.willBehit(character: self)
+            buff.willBehit(character: self, skill: skill)
         }
         
 
@@ -143,12 +153,12 @@ extension MMUnit {
     
     func didBehit(skill: BTSkill, damage: MMDamage) {
         for buff in self.buffs {
-//            buff.didBehit(character: self, skill: skill, damage: damage)
+            buff.didBehit(character: self, skill: skill, damage: damage)
         }
         
         card.didBehit(character: self, skill: skill, damage: damage)
-        handleFanTanWuLi(damage: damage)
-        handleFanTanFaShu(damage: damage)
+//        handleFanTanWuLi(damage: damage)
+//        handleFanTanFaShu(damage: damage)
     }
     
     

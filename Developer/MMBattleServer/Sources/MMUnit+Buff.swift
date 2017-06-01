@@ -18,8 +18,8 @@ extension MMUnit {
             return
         }
         
-        buff.willAddToCharacter()
         buff.character = self
+        buff.willAddToCharacter()
         self.buffs.append(buff)
         buff.didAddToCharacter()
     }
@@ -43,7 +43,7 @@ extension MMUnit {
     
     func removeBuff(_ buff: MMBuff) {
         buff.willRemoveFromCharacter()
-        self.buffs = self.buffs.filter { $0.key == buff.key }
+        self.buffs = self.buffs.filter { $0.key != buff.key }
         buff.didRemoveFromCharacter()
     }
     

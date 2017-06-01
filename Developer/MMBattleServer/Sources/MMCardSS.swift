@@ -99,10 +99,66 @@ class SSTongKu: MMCard {
     
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
-        let damage = character.createDamage()
-        damage.destination = character.enemy.randomUnit
-        damage.addBuff(buff: "fushishu")
-        return damage
+        if skill.index == 1 {
+            let damage = character.createDamage()
+            damage.destination = character.enemy.randomUnit
+            return damage
+        } else {
+            return nil
+        }
+    }
+    
+    
+    override func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
+        if skill.index == 1 {
+            return []
+        } else {
+            let ret = character.enemy.findAllUnits().filter {
+                $0.hasBuff("fushishu")
+            }.map { char -> MMDamage in
+                let damage = character.createDamage()
+                damage.destination = char
+                return damage
+            }
+            
+             return ret
+        }
+    }
+    
+    
+    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        super.hit(character: character, skill: skill, damage: damage)
+        
+        damage.userInfo["value"] = damage.value
+        
+        damage.value = 0
+        
+    }
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        if skill.index == 2 {
+            for enemy in character.enemy.aliveCharacters {
+                if enemy.hasBuff("fushishu") {
+                    (enemy.findBuff("fushishu") as! MMBuffFuShiShu).validate()
+                }
+            }
+        }
+    }
+    
+    
+    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        super.didHit(character: character, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
+        
+        
+        if skill.index == 1 {
+            if mainDamage!.destination.hasBuff("fushishu") {
+                (mainDamage!.destination.findBuff("fushishu") as! MMBuffFuShiShu).value += mainDamage!.userInfo["value"] as! Int
+            } else {
+                mainDamage!.destination.addBuff(MMBuffFuShiShu(value: mainDamage!.userInfo["value"] as! Int))
+                character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .addBuff(key: "fushishu")))
+            }
+        }
+        
     }
     
     

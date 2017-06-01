@@ -50,6 +50,7 @@ class SMZengQiang: MMCard {
         let damage = character.createDamage()
         damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
         skill.mainDamage = damage
+        damage.userInfo["changesp"] = 1
         return damage
     }
     
@@ -60,6 +61,7 @@ class SMZengQiang: MMCard {
         if let _ = skill.userinfo["isfengnu"] as? Bool {
             for _ in 0..<2 {
                 let damage = character.createDamage()
+                damage.value = skill2Factor
                 damage.destination = skill.mainDamage!.destination
                 damages.append(damage)
             }
@@ -67,6 +69,17 @@ class SMZengQiang: MMCard {
         }
         return damages
     }
+    
+    
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        let changeSP = damage.userInfo["changesp"] as? Int ?? 0
+        
+        damage.destination.sp += changeSP
+        damage.destination.hp -= damage.value
+    }
+    
+    
     
     
 }
@@ -107,6 +120,8 @@ class SMYuanSu: MMCard {
         let damage = character.createDamage()
         damage.destination = character.enemy.findCharacter(forRangeAttack: character.position)
         skill.mainDamage = damage
+        damage.userInfo["factor"] = Float(1)
+        damage.userInfo["changesp"] = 1
         return damage
     }
     
@@ -116,35 +131,43 @@ class SMYuanSu: MMCard {
         if skill.index == 1 {
             if let _ = skill.userinfo["isguozai"] as? Bool {
                 let damage = character.createDamage()
+                damage.userInfo["factor"] = Float(1)
                 damage.destination = skill.mainDamage!.destination
-                return [damage]
             }
         } else {
-            for i in 0..<2 {
-                let damage = character.createDamage()
-                if i == 0 {
-                    damage.value = damage.value.multiply(0.7)
-                } else if i == 1 {
-                    damage.value = damage.value.multiply(0.4)
-                }
-                damage.destination = character.enemy.randomUnit
-                damages.append(damage)
+
+            let units = character.enemy.randomUnits(count: 3).filter {
+                $0.key != skill.mainDamage!.destination.key
             }
             
-            if let _ = skill.userinfo["isguozai"] as? Bool {
+            
+            var value: Float = 0.7
+            for unit in units {
                 let damage = character.createDamage()
-                damage.destination = skill.mainDamage!.destination
+                damage.destination = unit
+                damage.userInfo["factor"] = value
+                value *= value
                 damages.append(damage)
+            }            
+            
+            
+            if let _ = skill.userinfo["isguozai"] as? Bool {
+                var guozaiDamages = [MMDamage]()
+                let damage = character.createDamage()
+                damage.userInfo = skill.mainDamage!.userInfo
+                damage.destination = skill.mainDamage!.destination
+                guozaiDamages.append(damage)
                 
-                for i in 0..<2 {
+                
+                for d in damages {
                     let damage = character.createDamage()
-                    if i == 0 {
-                        damage.value = damage.value.multiply(0.7)
-                    } else if i == 1 {
-                        damage.value = damage.value.multiply(0.4)
-                    }
-                    damage.destination = character.enemy.randomUnit
-                    damages.append(damage)
+                    damage.userInfo = d.userInfo
+                    damage.destination = d.destination
+                    guozaiDamages.append(d)
+                }
+                
+                for d in guozaiDamages {
+                    damages.append(d)
                 }
             }
         }
@@ -154,14 +177,18 @@ class SMYuanSu: MMCard {
     
     
     
-    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
-        if skill.index == 1 {
-            character.sp += 1
-        } else {
-            character.sp = 0
-        }
+    
+    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        super.hit(character: character, skill: skill, damage: damage)
+        damage.value = damage.value.multiply(damage.userInfo["factor"] as! Float)
+    }
+    
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        let changeSP = damage.userInfo["changesp"] as? Int ?? 0
         
-        mainDamage!.destination.sp += 1
+        damage.destination.sp += changeSP
+        damage.destination.hp -= damage.value
     }
     
     

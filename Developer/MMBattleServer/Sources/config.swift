@@ -12,11 +12,13 @@ import Kitura
 
 
 #if os(Linux)
-let DungeonPath = "/home/ubuntu/Developer/MMFile/dungeons"
-let NPCCardPath = "/home/ubuntu/Developer/MMFile/cards"
+let DungeonPath = "/home/ubuntu/Developer/MMFileServer/dungeons"
+let CardPath = "/home/ubuntu/Developer/MMFileServer/cards"
+let UnitPath = "/home/ubuntu/Developer/MMFileServer/units"
 #else
 let DungeonPath = "/Users/yorg/Developer/MMFileServer/dungeons"
-let NPCCardPath = "/Users/yorg/Developer/MMFileServer/cards"
+let CardPath = "/Users/yorg/Developer/MMFileServer/cards"
+let UnitPath = "/Users/yorg/Developer/MMFileServer/units"
 #endif
 
 
@@ -59,7 +61,7 @@ extension RouterRequest {
 struct OORandom {
     
     static func happens(inPosibility number: Int) -> Bool {
-        if number < Int.random() {
+        if Int.random() < number {
             return true
         }
         
