@@ -12,13 +12,15 @@ import Kitura
 
 
 #if os(Linux)
-let DungeonPath = "/home/ubuntu/Developer/MMFileServer/dungeons"
-let CardPath = "/home/ubuntu/Developer/MMFileServer/cards"
-let UnitPath = "/home/ubuntu/Developer/MMFileServer/units"
+    let DungeonPath = "/home/ubuntu/Developer/MMFileServer/dungeons"
+    let MissionPath = "/home/ubuntu/Developer/MMFileServer/missions"
+    let CardPath = "/home/ubuntu/Developer/MMFileServer/cards"
+    let UnitPath = "/home/ubuntu/Developer/MMFileServer/units"
 #else
-let DungeonPath = "/Users/yorg/Developer/MMFileServer/dungeons"
-let CardPath = "/Users/yorg/Developer/MMFileServer/cards"
-let UnitPath = "/Users/yorg/Developer/MMFileServer/units"
+    let DungeonPath = "/Users/yorg/Developer/MMFileServer/dungeons"
+    let MissionPath = "/Users/yorg/Developer/MMFileServer/missions"
+    let CardPath = "/Users/yorg/Developer/MMFileServer/cards"
+    let UnitPath = "/Users/yorg/Developer/MMFileServer/units"
 #endif
 
 

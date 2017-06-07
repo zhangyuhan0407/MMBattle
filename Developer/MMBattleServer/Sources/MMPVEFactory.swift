@@ -16,10 +16,20 @@ class MMPVEFactory {
     static func createPVEUnits(index: Int) -> [MMUnit] {
         let mission = index / 100
         
-        let json = JSON.read(fromFile: "\(DungeonPath)/PVE_\(mission)")!
         
-        let bossIndex = index % 100
-        let boss = json["boss"][bossIndex].stringValue
+        let json: JSON
+        let boss: String
+        if mission == 0 {
+            json = JSON.read(fromFile: "\(MissionPath)/mission_\(index)")!
+            boss = json["boss"][0].string!
+        }
+        else {
+            json = JSON.read(fromFile: "\(DungeonPath)/dungeon_\(mission)")!
+            let bossIndex = index % 100
+            boss = json["boss"][bossIndex].string!
+        }
+        
+        
         
         let simpleCharJSONs = json[kCharacters][boss].array!
         
