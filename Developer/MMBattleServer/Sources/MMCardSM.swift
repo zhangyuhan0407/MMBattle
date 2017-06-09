@@ -241,6 +241,18 @@ class SMZhiLiao: MMCard {
     }
     
     
+    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        super.hit(character: character, skill: skill, damage: damage)
+        
+        damage.value = -damage.value
+    }
+    
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        damage.destination.hp -= damage.value
+    }
+    
+    
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
         if skill.index == 1 {
             character.sp += 1

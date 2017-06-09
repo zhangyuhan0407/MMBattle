@@ -42,7 +42,6 @@ final class MMUnit: JSONDeserializable {
     var observer = [MMUnitObservable]()
     
     
-    
     var key: String {
         return self.card.key
     }

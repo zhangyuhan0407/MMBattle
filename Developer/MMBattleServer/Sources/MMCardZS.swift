@@ -11,25 +11,6 @@ import Foundation
 
 class ZSWuQi: MMCard {
     
-    override init() {
-        super.init()
-        
-        self.key = "zs_wuqi"
-        self.id = 23
-        self.name = "武器战"
-        
-        self.attackType = .physics
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 10
-        self.def = 40
-        self.mag = 10
-        self.spd = 0
-        
-        
-    }
-    
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
@@ -55,30 +36,29 @@ class ZSWuQi: MMCard {
 
 class ZSKuangBao: MMCard {
     
-    override init() {
-        super.init()
-        
-        self.key = "zs_kuangbao"
-        self.id = 24
-        self.name = "狂暴战"
-
-        self.attackType = .physics
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 10
-        self.def = 40
-        self.mag = 10
-        self.spd = 0
-        
-        
-    }
-    
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
+        skill.mainDamage = damage
         return damage
+    }
+    
+    
+    
+    override func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
+        if skill.index == 1 {
+            return []
+        }
+        else {
+            var units = character.enemy.findUnitsInRow(inPosition: skill.mainDamage!.destination.position)
+            units = units.filter { $0.position != skill.mainDamage!.destination.position }
+            return units.map {
+                let damage = character.createDamage()
+                damage.destination = $0
+                return damage
+            }
+        }
     }
     
     
@@ -88,33 +68,29 @@ class ZSKuangBao: MMCard {
 
 class ZSFangYu: MMCard {
     
-    override init() {
-        super.init()
+    override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         
-        self.key = "zs_fangyu"
-        self.id = 25
-        self.name = "防战"
-
-        self.attackType = .physics
+        let damage = character.createDamage()
         
-        self.sp = 3
-        self.hp = 100
-        self.atk = 10
-        self.def = 40
-        self.mag = 10
-        self.spd = 0
+        if skill.index == 1 {
+            damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
+        }
         
+        else {
+            damage.destination = character
+        }
         
+        return damage
     }
     
     
-    override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
         if skill.index == 1 {
-            let damage = character.createDamage()
-            damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
-            return damage
-        } else {
-            return nil
+            damage.destination.hp -= damage.value
+            damage.destination.sp += 1
+        }
+        else {
+            
         }
     }
     
@@ -125,7 +101,17 @@ class ZSFangYu: MMCard {
                 damage.value = damage.value.multiply(0.4)
             }
         }
-        super.behit(character: character, skill: skill, damage: damage)
+    }
+    
+    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        if skill.index == 1 {
+            character.sp += 1
+        }
+        else {
+            character.sp = 0
+            character.addBuff(MMBuffDunQiang())
+            character.record.putAfterFight(character.createCustomAnimationDictionary(type: .addBuff(key: "dunqiang")))
+        }
     }
     
 }

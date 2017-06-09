@@ -23,38 +23,108 @@ class MMCardFactory {
     
     
     func findCard(key: String) -> MMCard {
+        
+        if key.contains("boss") {
+            print("this is boss")
+        }
+        
+        
         if let card = cards[key] {
             return card
         }
         
-        
+        let json = JSON.read(fromFile: "\(UnitPath)/\(key)")!
         let card: MMCard
-        if key.contains("fs") {
+        
+        if key.contains("_fs_") {
             card = MMNPC_FS(key: key)
-        } else if key.contains("ms") {
+        } else if key.contains("_ms_") {
             card = MMNPC_MS()
-        } else if key.contains("ss") {
+        } else if key.contains("_ss_") {
             card = MMNPC_SS(key: key)
-        } else if key.contains("dz") {
+        } else if key.contains("_dz_") {
             card = MMNPC_DZ(key: key)
-        } else if key.contains("xd") {
+        } else if key.contains("_xd_") {
             card = MMNPC_XD(key: key)
-        } else if key.contains("sm") {
+        } else if key.contains("_sm_") {
             card = MMNPC_SM()
-        } else if key.contains("lr") {
+        } else if key.contains("_lr_") {
             card = MMNPC_LR(key: key)
-        } else if key.contains("zs") {
+        } else if key.contains("_zs_") {
             card = MMNPC_ZS(key: key)
-        } else if key.contains("qs") {
+        } else if key.contains("_qs_") {
             card = MMNPC_QS(key: key)
         } else {
-            card = SMZengQiang()
+            
+            let cls = json["cls"].string!
+            
+            switch cls {
+            case "fs_huoyan":
+                card = FSHuoYan()
+            case "fs_bingshuang":
+                card = FSBingShuang()
+            case "fs_aoshu":
+                card = FSAoShu()
+            case "ms_shensheng":
+                card = MSShenSheng()
+            case "ms_jielv":
+                card = MSJieLv()
+            case "ms_anying":
+                card = MSAnYing()
+            case "ss_tongku":
+                card = SSTongKu()
+            case "ss_huimie":
+                card = SSHuiMie()
+            case "ss_emo":
+                card = SSEMo()
+            case "dz_cisha":
+                card = DZCiSha()
+            case "dz_minrui":
+                card = DZMinRui()
+            case "dz_zhandou":
+                card = DZZhanDou()
+            case "xd_xiong":
+                card = XDXiong()
+            case "xd_mao":
+                card = XDMao()
+            case "xd_niao":
+                card = XDNiao()
+            case "xd_zhiliao":
+                card = XDZhiLiao()
+            case "sm_yuansu":
+                card = SMYuanSu()
+            case "sm_zengqiang":
+                card = SMZengQiang()
+            case "sm_zhiliao":
+                card = SMZhiLiao()
+            case "lr_sheji":
+                card = LRSheJi()
+            case "lr_shengcun":
+                card = LRShengCun()
+            case "lr_shouwang":
+                card = LRShouWang()
+            case "zs_wuqi":
+                card = ZSWuQi()
+            case "zs_fangyu":
+                card = ZSFangYu()
+            case "zs_kuangbao":
+                card = ZSKuangBao()
+            case "qs_chengjie":
+                card = QSChengJie()
+            case "qs_fangyu":
+                card = QSFangYu()
+            case "qs_zhiliao":
+                card = QSShenSheng()
+            default:
+                fatalError()
+            }
+            
         }
         
         
         cards.updateValue(card, forKey: key)
         
-        loadCardProperties(fromJSON: JSON.read(fromFile: "\(UnitPath)/\(key)")!)
+        loadCardProperties(fromJSON: json)
         
         return card
         
@@ -133,6 +203,7 @@ class MMCardFactory {
         let card = cards[json["key"].stringValue]!
 
         
+        card.key = json["key"].string!
         card.id     = json["id"].intValue
         card.name   = json[kName].stringValue
         
@@ -145,8 +216,8 @@ class MMCardFactory {
         card.skill2Factor = json["skill2factor"].intValue
         
         
-        card.sp     = json["sp"].int!
-        card.hp     = json["hp"].int!
+        card.sp     = json["maxsp"].int ?? json["sp"].int!
+        card.hp     = json["maxhp"].int ?? json["hp"].int!
         
         
         card.atk    = json["atk"].int ?? 0

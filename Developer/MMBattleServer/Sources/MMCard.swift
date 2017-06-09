@@ -54,7 +54,7 @@ class MMCard {
     
     func createSkill(character: MMUnit) -> BTSkill {
         let skill = BTSkill(unit: character)
-        if character.sp >= self.sp {
+        if character.sp >= character.maxSP {
             skill.index = 2
         } else {
             skill.index = 1

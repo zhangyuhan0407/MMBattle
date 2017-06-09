@@ -101,26 +101,65 @@ class FSBingShuang: MMCard {
     }
     
     
+    /*
+     
+     
+     冰法
+     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+     
+     ////        if skill.index == 2 {
+     ////            return nil
+     ////        }
+     //
+     //        let damage = character.createDamage()
+     //        damage.destination = character.enemy.findCharacter(forRangeAttack: character.position)
+     //
+     //
+     //        for unit in character.player.findAllUnits() {
+     //            if unit.hasBuff("binghuan") {
+     //                damage.destination = unit
+     //                break
+     //            }
+     //
+     //        }
+     
+     return damage
+     
+     }
+     
+     */
+    
+    
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
-        if skill.index == 2 {
-            return nil
-        }
-        
         let damage = character.createDamage()
         damage.destination = character.enemy.findCharacter(forRangeAttack: character.position)
         
-        
-        for unit in character.player.findAllUnits() {
-            if unit.hasBuff("binghuan") {
-                damage.destination = unit
-                break
-            }
-            
-        }
-        
+        skill.mainDamage = damage
         return damage
-        
     }
+
+    
+    
+    /*
+    
+//    override func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
+//        if skill.index == 1 {
+//            return []
+//        }
+//        
+//        let units = character.enemy.findUnitsFrontRow()
+//        
+//        return units.map { unit in
+//            let damage = character.createDamage()
+//            damage.destination = unit
+//            return damage
+//        }
+//        
+//    }
+     
+     
+ */
+    
     
     
     override func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
@@ -128,45 +167,54 @@ class FSBingShuang: MMCard {
             return []
         }
         
-        let units = character.enemy.findUnitsFrontRow()
-        
-        return units.map { unit in
-            let damage = character.createDamage()
-            damage.destination = unit
-            return damage
-        }
-        
-    }
-    
-    
-    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
-        super.hit(character: character, skill: skill, damage: damage)
-        
-        if skill.index == 1 {
-            if damage.destination.hasBuff("binghuan") {
-                damage.value *= 2
+        else {
+            
+            var units = character.enemy.findUnitsInRow(inPosition: skill.mainDamage!.destination.position)
+            
+            units = units.filter {
+                $0.position != skill.mainDamage!.destination.position
             }
-        }
-        if skill.index == 2 {
-            damage.value = 0
-        }
-        
-    }
-    
-    
-    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
-        
-        if skill.index == 1 {
-            character.sp += 1
-        } else {
-            character.sp = 0
-            for damage in sideDamages {
-                damage.destination.addBuff(MMBuffBingHuan())
-                character.record.putAfterFight(damage.destination.createCustomAnimationDictionary(type: .addBuff(key: "binghuan")))
+            
+            return units.map {
+                let damage = character.createDamage()
+                damage.destination = $0
+                return damage
             }
+            
         }
         
     }
+    
+    
+    
+//    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+//        super.hit(character: character, skill: skill, damage: damage)
+//        
+//        if skill.index == 1 {
+//            if damage.destination.hasBuff("binghuan") {
+//                damage.value *= 2
+//            }
+//        }
+//        if skill.index == 2 {
+//            damage.value = 0
+//        }
+//        
+//    }
+    
+    
+//    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+//        
+//        if skill.index == 1 {
+//            character.sp += 1
+//        } else {
+//            character.sp = 0
+//            for damage in sideDamages {
+//                damage.destination.addBuff(MMBuffBingHuan())
+//                character.record.putAfterFight(damage.destination.createCustomAnimationDictionary(type: .addBuff(key: "binghuan")))
+//            }
+//        }
+//        
+//    }
     
     
 }
@@ -227,6 +275,12 @@ class FSHuoYan: MMCard {
     
     
 }
+
+
+
+
+
+
 
 
 

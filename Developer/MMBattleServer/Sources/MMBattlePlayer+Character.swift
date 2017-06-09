@@ -76,6 +76,27 @@ extension MMBattlePlayer {
     }
     
     
+    
+    func findUnitsInRow(inPosition pos: Int) -> [MMUnit] {
+        let sortedCells: [Int]
+        switch pos {
+        case 0,1,2,3:
+            sortedCells = [0,1,2,3]
+        case 4,5,6,7:
+            sortedCells = [4,5,6,7]
+        case 8,9,10,11:
+            sortedCells = [8,9,10,11]
+        case 12,13,14,15:
+            sortedCells = [12,13,14,15]
+        default:
+            fatalError()
+        }
+        
+        return findCharacters(inCells: sortedCells)
+    }
+    
+    
+    
     func findUnitsInColumn(inPosition pos: Int) -> [MMUnit] {
         let sortedCells: [Int]
         switch pos {
@@ -93,6 +114,9 @@ extension MMBattlePlayer {
         
         return findCharacters(inCells: sortedCells)
     }
+    
+    
+    
     
     
     func findCharacters(crossInPosition position: Int) -> [MMUnit] {
@@ -267,7 +291,8 @@ extension MMBattlePlayer {
     
     var randomUnit: MMUnit {
         let random = Int.random()
-        return self.aliveCharacters[random % self.aliveCharacters.count]
+        let count = self.aliveCharacters.count
+        return self.aliveCharacters[random % count]
     }
     
     
@@ -279,12 +304,19 @@ extension MMBattlePlayer {
         var ret = [MMUnit]()
         while true {
             let rUnit = randomUnit
+            var isFound = false
+            
             for u in ret {
-                if u.key == rUnit.key {
+                
+                if let _ = u.userinfo["added"] as? Bool {
                     break
-                } else {
-                    ret.append(rUnit)
                 }
+
+            }
+            
+            if !isFound {
+                rUnit.userinfo["added"] = true
+                ret.append(rUnit)
             }
             
             if ret.count == count {

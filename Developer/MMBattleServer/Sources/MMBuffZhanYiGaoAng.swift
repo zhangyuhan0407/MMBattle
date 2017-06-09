@@ -318,4 +318,15 @@ class MMBuffEmoXingTai: MMBuff {
 
 
 
+class MMBuffDunQiang: MMBuff {
+    override init() {
+        super.init()
+        self.key = "dunqiang"
+        self.id = 12
+        self.name = "盾墙"
+        self.defaultRound = 1
+        self.remainRound = 1
+    }
+}
+
 

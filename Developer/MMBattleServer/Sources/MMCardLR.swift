@@ -9,59 +9,6 @@
 import Foundation
 
 
-//class MMTaoTie: MMCard {
-//    
-//    override init() {
-//        super.init()
-//        
-//        self.key = "taotie"
-//        self.id = 3
-//        self.name = "饕餮"
-//        
-//        self.attackRule = .range
-//        self.attackArea = .nineCube
-//        self.attackType = .demoralize
-//        
-//        
-//        self.ball = Ball.huo.rawValue
-//        self.category = CharacterCategory.disabler.rawValue
-//        
-//
-//        
-//        self.sp = 2
-//        self.hp = 100
-//        self.atk = 20
-//        self.def = 0
-//        self.mag = 0
-//        self.spd = 30
-//        
-////        self.xixue = 0
-//    }
-//    
-//    override func willHit(character: MMCharacter, damage: MMDamage) {
-//        if damage.skillIndex == 1 {
-//            damage.rule = .melee
-//        }
-//    }
-//    
-//    
-//    override func hit(character: MMCharacter, damage: MMDamage, allTargets: [MMCharacter]) {
-//        if damage.skillIndex == 1 {
-//            character.sp += 1
-//        } else {
-//            character.sp = 0
-//        }
-//        
-//        for tar in allTargets {
-//            tar.sp -= 1
-//        }
-//        
-//    }
-//    
-//}
-
-
-
 class LRShengCun: MMCard {
     
     
@@ -105,19 +52,31 @@ class LRShengCun: MMCard {
             }
         }
     }
+    
+    
+    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        if skill.index == 1 {
+            damage.destination.sp += 1
+        }
+        else {
+            damage.destination.sp -= 1
+        }
+        
+        damage.destination.hp -= damage.value
+    }
 
     
-    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
-        if skill.index == 1 {
-            super.didHit(character: character, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
-        } else {
-            character.sp = 0
-            mainDamage!.destination.sp -= 1
-            for damage in sideDamages {
-                damage.destination.sp -= 1
-            }
-        }
-    }
+//    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+//        if skill.index == 1 {
+//            super.didHit(character: character, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
+//        } else {
+//            character.sp = 0
+//            mainDamage!.destination.sp -= 1
+//            for damage in sideDamages {
+//                damage.destination.sp -= 1
+//            }
+//        }
+//    }
     
     
 }
@@ -184,6 +143,9 @@ class LRSheJi: MMCard {
             
         }
     }
+    
+    
+    
     
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
