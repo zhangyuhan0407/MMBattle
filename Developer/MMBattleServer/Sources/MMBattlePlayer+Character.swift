@@ -307,11 +307,10 @@ extension MMBattlePlayer {
             var isFound = false
             
             for u in ret {
-                
                 if let _ = u.userinfo["added"] as? Bool {
+                    isFound = true
                     break
                 }
-
             }
             
             if !isFound {
@@ -325,9 +324,9 @@ extension MMBattlePlayer {
             
         }
         
-        
-        
     }
+    
+    
     
     
 }

@@ -38,7 +38,7 @@ final class BTSkill: JSONDeserializable {
     var dict: [String: Any] {
         
         return  [kSourcePlayerKey: sour.player.key,
-                kSourceCardKey: sour.card.key,
+                kSourceCardKey: sour.key,
                 kSkillIndex: index,
                 kAttackArea: area.rawValue,
                 kAttackType: type.rawValue]

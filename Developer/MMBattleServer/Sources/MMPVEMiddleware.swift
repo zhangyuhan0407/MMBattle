@@ -30,7 +30,6 @@ class MMPVEBattleMiddleware: RouterMiddleware {
             return
         }
         
-        Logger.info("\(json)")
         
         guard let charJSONs = json[kCharacters].array
         else {
@@ -39,11 +38,11 @@ class MMPVEBattleMiddleware: RouterMiddleware {
         }
         
         
-        let p1Units = MMUnit.deserialize(fromJSONs: charJSONs)
+        let p1Units = MMUnitFactory.deserialize(fromJSONs: charJSONs)
         
         let player1 = MMBattlePlayerFactory.createBattlePlayer(player: playerKey, characters: p1Units)
         
-        let p2Units = MMPVEFactory.createPVEUnits(index: battleID)
+        let p2Units = MMUnitFactory.createPVEUnits(index: battleID)
         
         let player2 = MMBattlePlayerFactory.createPVEPlayer(forPlayer: playerKey, units: p2Units)
         

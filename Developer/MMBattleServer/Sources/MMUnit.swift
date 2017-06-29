@@ -31,7 +31,10 @@ final class MMUnit: JSONDeserializable {
     
     var card: MMCard!
 
+    var attackType: MMAttackType = .none
+    var key: String = ""
     var position: Int = 0
+    var cls: String = ""
     
     var buffs: [MMBuff] = []
     
@@ -42,9 +45,9 @@ final class MMUnit: JSONDeserializable {
     var observer = [MMUnitObservable]()
     
     
-    var key: String {
-        return self.card.key
-    }
+//    var key: String {
+//        return self.card.key
+//    }
     
     
     private var _hp: Int = 0
@@ -124,7 +127,13 @@ final class MMUnit: JSONDeserializable {
     var fantanwuli = 0
     var fantanfashu = 0
     
+    
+    var skill1Factor: Int = 100
+    var skill2Factor: Int = 100
+    
     var userinfo = [String: Any]()
+    
+    
     
     var isAlive: Bool {
         return self.hp > 0
@@ -141,10 +150,18 @@ final class MMUnit: JSONDeserializable {
     static func deserialize(fromJSON json: JSON) -> MMUnit {
         
         let char = MMUnit()
-        char.card = MMCardFactory.sharedInstance.findCard(key: json[kCardKey].string ?? json[kKey].stringValue)
+        char.card = MMCardFactory.sharedInstance.findCard(forCls: json["cls"].string!)
         
         
+        
+        char.key = json[kKey].string!
+        char.cls = json["cls"].string!
         char.position = json[kPosition].int ?? 0
+        char.attackType = MMAttackType(rawValue: json["attacktype"].string!)!
+        
+        
+        char.skill1Factor = json["skill1factor"].int!
+        char.skill2Factor = json["skill2factor"].int!
         
         char.maxHP = json[kMaxHP].int!
         char.maxSP = json[kMaxSP].int!
@@ -153,10 +170,10 @@ final class MMUnit: JSONDeserializable {
         char.sp = json[kSP].int ?? 0
         
         
-        char.atk = json[kATK].int ?? 0
+        char.atk = json[kATK].int!
         char.mag = json[kMAG].int ?? 0
-        char.def = json[kDEF].int!
-        char.spd = json[kSPD].int!
+        char.def = json[kDEF].int ?? 0
+        char.spd = json[kSPD].int ?? 0
         
         char.baoji = json[kBaoJi].int ?? 0
         char.mingzhong = json[kMingZhong].int ?? 0
@@ -179,21 +196,22 @@ final class MMUnit: JSONDeserializable {
     }
     
     
-    static func deserialize(fromJSONs jsons: [JSON]) -> [MMUnit] {
-        return jsons.map({ (json) -> MMUnit in
-            return MMUnit.deserialize(fromJSON: json)
-        })
-    }
+    
     
     
     var state: [String: Any] {
-        let dict: [String: Any] = [kPlayerKey: player.key,
-                                   kCardKey: card.key,
+        var dict: [String: Any] = [kPlayerKey: player.key,
+                                   kCardKey: key,
                                    kPosition: position,
                                    kMaxHP: maxHP,
                                    kMaxSP: maxSP,
                                    kHP: hp,
                                    kSP: sp]
+        
+        if let dun = self.findBuff("dun") as? MMBuffDun {
+            dict.updateValue(dun.value, forKey: "dunvalue")
+        }
+        
         
         return dict
     }

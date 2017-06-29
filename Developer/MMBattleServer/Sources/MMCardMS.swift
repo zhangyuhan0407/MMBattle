@@ -11,27 +11,6 @@ import Foundation
 
 class MSShenSheng: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "ms_shensheng"
-        self.id = 4
-        self.name = "神牧"
-        
-        self.attackType = .holy
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 100
-        self.spd = 30
-        
-    }
-    
-    
-    
     override func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
         
         return character.player.aliveCharacters.map { char in
@@ -65,26 +44,6 @@ class MSShenSheng: MMCard {
 
 
 class MSJieLv: MMCard {
-    
-    override init() {
-        
-        super.init()
-        
-        self.key = "ms_jielv"
-        self.id = 5
-        self.name = "戒律牧"
-        
-        self.attackType = .holy
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 85
-        self.spd = 30
-        
-    }
-    
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
@@ -130,27 +89,6 @@ class MSJieLv: MMCard {
 
 class MSAnYing: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "ms_anying"
-        self.id = 9
-        self.name = "暗牧"
-        
-        self.attackType = .shadow
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 100
-        self.spd = 30
-        
-    }
-    
-    
-    
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         
@@ -183,11 +121,15 @@ class MSAnYing: MMCard {
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
         let damage = mainDamage!
-        if damage.isShanbi { return }
-//
+        
         if skill.index == 1 {
+            if damage.isShanbi { return }
             character.sp += 1
         } else {
+            if damage.isShanbi {
+                character.sp = 0
+                return
+            }
             character.sp = mainDamage!.userInfo["destsp"] as! Int
         }
     }

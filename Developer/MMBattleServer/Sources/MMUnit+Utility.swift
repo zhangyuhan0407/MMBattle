@@ -27,7 +27,7 @@ extension MMUnit {
         switch type {
         case .changeHP(let offset):
             return ["playerkey": self.player.key,
-                    "cardkey": self.card.key,
+                    "cardkey": self.key,
                     "cellid": position,
                     "reason": "changehp",
                     "hp": self.hp,
@@ -35,20 +35,20 @@ extension MMUnit {
                     "offsethp": offset]
         case .changeSP:
             return ["playerkey": self.player.key,
-                    "cardkey": self.card.key,
+                    "cardkey": self.key,
                     "cellid": position,
                     "reason": "changesp",
                     "sp": self.sp,
                     "maxsp": self.maxSP]
         case .addBuff(let key):
             return ["playerkey": self.player.key,
-                    "cardkey": self.card.key,
+                    "cardkey": self.key,
                     "cellid": position,
                     "reason": "addbuff",
                     "buffname": key]
         case .removeBuff(let key):
             return ["playerkey": self.player.key,
-                    "cardkey": self.card.key,
+                    "cardkey": self.key,
                     "cellid": position,
                     "reason": "removebuff",
                     "buffname": key]

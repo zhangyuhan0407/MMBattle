@@ -17,35 +17,7 @@ class MMCard {
     
     var key: String!
     var id: Int!
-    var name: String!
     
-//    var attackRule: AttackRule = .melee
-//    var attackArea: AttackArea = .single
-    var attackType: MMAttackType = .none
-    var cls: String = ""
-    
-    var skill1Factor: Int = 50
-    var skill2Factor: Int = 150
-    
-
-    
-    var sp: Int = 5
-    var hp: Int = 100
-    var atk: Int = 100
-    var def: Int = 100
-    var mag: Int = 100
-    var spd: Int = 100
-    
-    var baoji: Int = 0
-    var shanbi: Int = 0
-    var mingzhong: Int = 0
-    var gedang: Int = 0
-    
-    
-    var zaisheng: Int = 0
-    var xixue: Int = 0
-    var fantanwuli: Int = 0
-    var fantanfashu: Int = 0
     
     init() {
         
@@ -59,7 +31,7 @@ class MMCard {
         } else {
             skill.index = 1
         }
-        skill.type = character.card.attackType
+        skill.type = character.attackType
         return skill
     }
     
@@ -83,10 +55,15 @@ class MMCard {
     
     func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
         if skill.index == 1 {
-            damage.value = skill1Factor
+            damage.value = character.atk * character.skill1Factor / 100
         } else if skill.index == 2 {
-            damage.value = skill2Factor
+            damage.value = character.atk * character.skill2Factor / 100
         }
+        
+        if damage.value >= 100 {
+            fatalError()
+        }
+        
     }
     
     
@@ -97,6 +74,9 @@ class MMCard {
     
     func behit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
         
+        _ = makeCalculatedValue(damage: damage, char1: damage.source, char2: damage.destination)
+        
+        
     }
     
     
@@ -106,6 +86,9 @@ class MMCard {
     
     
     func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        if damage.isShanbi {
+            return
+        }
         damage.destination.hp -= damage.value
         damage.destination.sp += 1
         
@@ -115,11 +98,29 @@ class MMCard {
     
     //zyh!! shanbi do not increase sp
     func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        var shouldIncreaseSP = false
+        
+        for damage in sideDamages {
+            if damage.isShanbi == false {
+                shouldIncreaseSP = true
+            }
+        }
+        
+        if mainDamage != nil {
+            if mainDamage!.isShanbi == false {
+                shouldIncreaseSP = true
+            }
+        }
+        
+        
+        
         if skill.index == 1 {
+            if !shouldIncreaseSP { return }
             character.sp += 1
         } else if skill.index == 2 {
             character.sp = 0
         }
+        
     }
     
     

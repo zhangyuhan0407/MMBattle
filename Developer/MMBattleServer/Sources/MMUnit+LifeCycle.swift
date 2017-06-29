@@ -36,28 +36,27 @@ extension MMUnit {
 //            damage.skillIndex = 2
 //            damage.area = card.attackArea
 //        }
-        damage.type = self.card.attackType
+//        damage.type = self.card.attackType
         
         
-//        switch damage.type {
-//        case .physics:
-//            damage.value = makeAttackValue(forCharacter: self)
-//            print("\(self.key) atk: \(self.atk)")
-////        case .magic:
-////            damage.value = makeMagicValue(forCharacter: self)
-////        case .real:
-////            damage.value = makeRealValue(forCharacter: self)
-////        case .heal:
-////            damage.value = makeHealValue(forCharacter: self)
-////        case .demoralize:
-////            damage.value = makeRealValue(forCharacter: self)
-////        case .poisonous:
-////            damage.value = makeMagicValue(forCharacter: self)
-////        case .vulnerable:
-////            damage.value = makeMagicValue(forCharacter: self)
-//        default:
+        switch damage.type {
+        case .physics:
+            damage.value = makeAttackValue(forCharacter: self)
+//        case .magic:
 //            damage.value = makeMagicValue(forCharacter: self)
-//        }
+//        case .real:
+//            damage.value = makeRealValue(forCharacter: self)
+//        case .heal:
+//            damage.value = makeHealValue(forCharacter: self)
+//        case .demoralize:
+//            damage.value = makeRealValue(forCharacter: self)
+//        case .poisonous:
+//            damage.value = makeMagicValue(forCharacter: self)
+//        case .vulnerable:
+//            damage.value = makeMagicValue(forCharacter: self)
+        default:
+            damage.value = makeMagicValue(forCharacter: self)
+        }
         
         
         return damage
@@ -69,7 +68,7 @@ extension MMUnit {
         let skill = card.createSkill(character: self)
         
         
-        if self.card.attackType == .physics {
+        if self.attackType == .physics {
             if self.hasBuff("binghuan") {
                 skill.index = 0
             }
@@ -80,6 +79,11 @@ extension MMUnit {
         }
         
         if self.hasBuff("xuanyun") {
+            skill.index = 0
+        }
+        
+        
+        if self.isAlive == false {
             skill.index = 0
         }
         

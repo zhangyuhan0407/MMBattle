@@ -175,8 +175,8 @@ class MMBuffXuanYun: MMBuff {
         self.key = "xuanyun"
         self.id = 7
         self.name = "眩晕"
-        self.defaultRound = 1
-        self.remainRound = 1
+        self.defaultRound = 2
+        self.remainRound = 2
     }
     
 }
@@ -285,8 +285,8 @@ class MMBuffShiXue: MMBuff {
         self.key = "shixue"
         self.id = 10
         self.name = "嗜血"
-        self.defaultRound = 1
-        self.remainRound = 1
+        self.defaultRound = 2
+        self.remainRound = 2
     }
     
     

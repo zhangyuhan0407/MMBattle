@@ -33,7 +33,7 @@ class MMBattlePlayer {
     
     var speed: Int {
         return self.characters.reduce(0, { (a: Int, char: MMUnit) -> Int in
-            return a + char.card.spd
+            return a + char.spd
             
         })
     }
@@ -146,67 +146,6 @@ class MMBattlePlayer {
     
     
     
-    
-    ///
-    
-    
-    
-//    func findMainTarget(damage: MMDamage) -> MMCharacter {
-//        let player: MMBattlePlayer
-//        
-//        if damage.rule == .help || damage.rule == .current {
-//            player = self
-//        } else {
-//            player = self.enemy
-//        }
-//        
-//        let mainTarget: MMCharacter
-//        switch damage.rule {
-//        case .mostHP:
-//            mainTarget = player.mostHPCharacter
-//        case .fewerHP:
-//            mainTarget = player.fewerHPCharacter
-//        case .mostSP:
-//            mainTarget = player.mostSPCharacters.last!
-//        case .fewerSP:
-//            mainTarget = player.fewerSPCharacters.last!
-//        case .random:
-//            mainTarget = player.characters[Int.random(max: player.characters.count)]
-//        case .next:
-//            
-//            var temp = player.characters.last!
-//            for char in player.characters {
-//                if !char.isAttackedInCurrentRound {
-//                    temp = char
-//                }
-//            }
-//            
-//            mainTarget = temp
-//            
-//        default:
-//            mainTarget = player.findCharacters(inCells: AttackRule.find(position: damage.source.position, rule: damage.rule)).first ?? player.characters.first!
-//
-//        }
-//        
-//        //职责不清晰
-//        //damage.destination = mainTarget
-//        
-//        return mainTarget
-//    }
-    
-    
-//    func findTargets(damage: MMDamage) -> [MMCharacter] {
-//        let player: MMBattlePlayer
-//        
-//        if damage.rule == .help {
-//            player = self
-//        } else {
-//            player = self.enemy
-//        }
-//        
-//        return player.findCharacters(inCells: AttackArea.find(position: damage.destination!.position, area: damage.area))
-//    }
-    
        
 }
 
@@ -222,31 +161,10 @@ class MMBattlePlayerAI: MMBattlePlayer {
     
     init() {
         super.init(key: "AI", characters: [])
-//        let player = MMPlayerRepo.findPlayer(key: "ai")
-//        let cards = ["fs_bingshuang", "fs_aoshu", "sm_zengqiang", "sm_zhiliao", "sm_yuansu"]
-//        let fabao = [JSON].init(repeating: JSON(""), count: 5)
-//        let cells = [1, 3, 6, 11, 15]
-//        let characters = MMCharacterRepo.create(cards: cards, fabaos: fabao, cells: cells)
-//        super.init(player: player, characters: characters, guardian: [])
+
     }
     
     static func rechargeCharacters(round: Int) -> [MMUnit] {
-        
-//        if round == 3 {
-////            let char = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-//            return []
-//        } else if round == 4 {
-////            let char1 = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-//            let char2 = MMCharacter(card: MMCardRepo.sharedInstance.cards["fs_aoshu"]!, fabao: MMFaBaoRepo.findOne(key: ""), position: 2)
-//            return [char2]
-//        } else if round == 2 {
-////            let char1 = MMCharacter(card: MMCardRepo.findOne(key: "houyi"), fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-////            let char2 = MMCharacter(card: MMCardRepo.findOne(key: "xingtian"), fabao: MMFaBaoRepo.findOne(key: ""), position: 2)
-//            let char = MMCharacter(card: MMCardRepo.sharedInstance.cards["ms_shensheng"]!, fabao: MMFaBaoRepo.findOne(key: ""), position: 8)
-//            let char3 = MMCharacter(card: MMCardRepo.sharedInstance.cards["ms_jielv"]!, fabao: MMFaBaoRepo.findOne(key: ""), position: 14)
-//            return [char, char3]
-//        }
-        
         return []
     }
     

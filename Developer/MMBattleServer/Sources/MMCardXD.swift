@@ -9,81 +9,13 @@
 import Foundation
 
 
-//class MMHouYi: MMCard {
-//    
-//    
-//    override init() {
-//        super.init()
-//        
-//        self.key = "houyi"
-//        self.id = 2
-//        self.name = "后羿"
-//        
-//        self.attackRule = .range
-//        self.attackArea = .nineCube
-//        self.attackType = .physics
-//        
-//        
-//        self.ball = Ball.huo.rawValue
-//        self.category = CharacterCategory.arrow.rawValue
-//
-//        
-//        self.sp = 5
-//        self.hp = 100
-//        self.atk = 70
-//        self.def = 0
-//        self.mag = 0
-//        self.spd = 30
-//        
-////        self.baoji = 30
-////        self.mingzhong = 15
-//    }
-//    
-//    
-//    
-//    override func willHit(character: MMCharacter, damage: MMDamage) {
-//        if damage.skillIndex == 1 {
-//            damage.area = .singleTwice
-//            damage.userInfo.updateValue(true, forKey: "islianji")
-//        }
-//    }
-//    
-//    
-//    override func hit(character: MMCharacter, damage: MMDamage, allTargets: [MMCharacter]) {
-//        if damage.skillIndex == 1 {
-//            character.sp += 1
-//            damage.destination!.sp += 1
-//        } else {
-//            character.sp = 0
-//            for tar in allTargets {
-//                tar.sp += 1
-//            }
-//        }
-//    }
-//}
-
-
 class XDXiong: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "xd_xiong"
-        self.id = 9
-        self.name = "熊德"
-  
-        
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 100
-        self.spd = 30
-        
-        
-        self.shanbi = 30
+    
+    override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+        let damage = character.createDamage()
+        damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
+        return damage
     }
     
 }
@@ -91,99 +23,70 @@ class XDXiong: MMCard {
 
 class XDMao: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "xd_mao"
-        self.id = 9
-        self.name = "猫德"
- 
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 100
-        self.spd = 30
-        
+    override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+        let damage = character.createDamage()
+        damage.destination = character.enemy.aliveCharacters.last!
+        return damage
     }
     
     
-//    override func hit(character: MMCharacter, damage: MMDamage, allTargets: [MMCharacter]) {
-//        if damage.skillIndex == 2 {
-//            damage.destination!.addBuff(MMBuffXuanYun())
-//        }
-//    }
+    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        super.didHit(character: character, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
+        
+        if skill.index == 2 {
+            mainDamage!.destination.addBuff(MMBuffXuanYun())
+            character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .addBuff(key: "xuanyun")))
+        }
+        
+    }
     
 }
 
 
 class XDZhiLiao: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "xd_zhiliao"
-        self.id = 9
-        self.name = "奶德"
-        
- 
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 100
-        self.spd = 30
-        
+
+    override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+        if skill.index == 1 {
+            let damage = character.createDamage()
+            damage.destination = character.player.randomUnit
+            return damage
+        }
+        else {
+            return nil
+        }
     }
     
+    override func createSideDamages(character: MMUnit, skill: BTSkill) -> [MMDamage] {
+        if skill.index == 1 {
+            return []
+        }
+        else {
+            let units = character.player.randomUnits(count: 3)
+            return units.map {
+                let damage = character.createDamage()
+                damage.destination = $0
+                return damage
+            }
+        }
+    }
     
-//    override func hit(character: MMCharacter, damage: MMDamage, allTargets: [MMCharacter]) {
-//        if damage.skillIndex == 1 {
-//            attackArea = .single
-//        }
-//    }
-//    
-//    
-//    override func didHit(character: MMCharacter, mainTargetDamage damage: MMDamage, allTargetDamages: [MMDamage]) {
-//        if damage.skillIndex == 1 {
-//            let value = character.mag
-//            
-//            damage.destination?.addBuff(MMBuffHuiChun(value: value))
-//            
-//        } else {
-//            let value = character.mag.multiply(0.5)
-//            for damage in allTargetDamages {
-//                damage.destination?.addBuff(MMBuffYeXingShengZhang(value: value))
-//            }
-//        }
-//    }
+    override func hit(character: MMUnit, skill: BTSkill, damage: MMDamage) {
+        super.hit(character: character, skill: skill, damage: damage)
+        damage.value = -damage.value
+    }
+    
 }
 
 
 
 class XDNiao: MMCard {
-    override init() {
-        
-        super.init()
-        
-        self.key = "xd_niao"
-        self.id = 9
-        self.name = "鸟德"
-
-        
-        self.sp = 5
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 100
-        self.spd = 30
-        
-    }
     
+    override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
+        let damage = character.createDamage()
+        damage.destination = character.enemy.findCharacter(forRangeAttack: character.position)
+        return damage
+    }
     
     
     

@@ -10,26 +10,7 @@ import Foundation
 
 
 class QSShenSheng: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "qs_zhiliao"
-        self.id = 26
-        self.name = "奶骑"
-
-        self.attackType = .holy
-        
-        self.sp = 1
-        self.hp = 100
-        self.atk = 40
-        self.def = 30
-        self.mag = 0
-        self.spd = 40
-        
-    }
-    
-    
+ 
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         damage.destination = character.player.fewerHPCharacter
@@ -48,41 +29,10 @@ class QSShenSheng: MMCard {
     }
     
     
-    
-    override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
-        super.didHit(character: character, skill: skill, mainDamage: mainDamage, sideDamages: sideDamages)
-        
-//        if let buff = mainDamage!.destination.buffs.last {
-//            mainDamage!.destination.removeBuff(buff)
-//            character.record.putAfterFight(mainDamage!.destination.createCustomAnimationDictionary(type: .removeBuff(key: buff.key)))
-//        }
-    }
-    
-    
-    
 }
 
 
 class QSChengJie: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "qs_chengjie"
-        self.id = 27
-        self.name = "惩戒骑"
-        
-        self.attackType = .holy
-        
-        self.sp = 1
-        self.hp = 100
-        self.atk = 40
-        self.def = 30
-        self.mag = 0
-        self.spd = 40
-        
-    }
-    
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
@@ -123,35 +73,13 @@ class QSChengJie: MMCard {
         
         
     }
-    
-//    override func valueHandler(character: MMUnit, skill: BTSkill, damage: MMDamage) {
-//        let type = damage.userInfo["type"] as! String
-//        
-//        if skill.index == 1 {
-//            if type == "main" {
-//                damage.destination.hp -= damage.value
-//                damage.destination.sp += 1
-//            }
-//            else if type == "side" {
-//                damage.destination.sp += 1
-//            }
-//        }
-//        else {
-//            if type == "main" {
-//                damage.destination.hp -= damage.value
-//                damage.destination.sp += 1
-//            }
-//            else if type == "side" {
-//                damage.destination.hp += damage.value
-//                damage.destination.sp += 1
-//            }
-//        }
-//    }
-    
+
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        if mainDamage!.isShanbi == false {
+            mainDamage!.destination.sp += 1    
+        }
         
-        mainDamage!.destination.sp += 1
         
         for damage in sideDamages {
             damage.destination.sp += 1
@@ -167,25 +95,7 @@ class QSChengJie: MMCard {
 
 
 class QSFangYu: MMCard {
-    override init() {
-        super.init()
-        
-        self.key = "qs_fangyu"
-        self.id = 28
-        self.name = "防骑"
 
-        self.attackType = .holy
-        
-        self.sp = 1
-        self.hp = 100
-        self.atk = 40
-        self.def = 30
-        self.mag = 0
-        self.spd = 40
-        
-    }
-    
-    
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)

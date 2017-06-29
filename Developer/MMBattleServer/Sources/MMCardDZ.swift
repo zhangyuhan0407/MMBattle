@@ -10,26 +10,7 @@ import Foundation
 
 
 class DZCiSha: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "dz_cisha"
-        self.id = 10
-        self.name = "刺杀贼"
-        
-        self.attackType = .physics
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 0
-        self.def = 0
-        self.mag = 40
-        self.spd = 60
-        
-    }
-    
-    
+
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
@@ -41,25 +22,6 @@ class DZCiSha: MMCard {
 
 
 class DZZhanDou: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "dz_zhandou"
-        self.id = 11
-        self.name = "战斗贼"
-        
-        self.attackType = .physics
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 0
-        self.def = 0
-        self.mag = 40
-        self.spd = 60
-        
-    }
-    
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
@@ -74,9 +36,11 @@ class DZZhanDou: MMCard {
         } else {
             var damages = [MMDamage]()
             for _ in 0..<3 {
-                let damage = character.createDamage()
-                damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
-                damages.append(damage)
+                if character.enemy.hasAliveCharacter {
+                    let damage = character.createDamage()
+                    damage.destination = character.enemy.findUnits(forMeleeAttack: character.position)
+                    damages.append(damage)
+                }
             }
             return damages
         }
@@ -89,23 +53,6 @@ class DZZhanDou: MMCard {
 
 
 class DZMinRui: MMCard {
-    override init() {
-        super.init()
-        
-        self.key = "dz_minrui"
-        self.id = 12
-        self.name = "敏锐贼"
-        
-        self.attackType = .physics
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 0
-        self.def = 0
-        self.mag = 40
-        self.spd = 60
-        
-    }
  
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()

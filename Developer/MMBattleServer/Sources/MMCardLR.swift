@@ -11,27 +11,6 @@ import Foundation
 
 class LRShengCun: MMCard {
     
-    
-    override init() {
-        super.init()
-        
-        self.key = "lr_shengcun"
-        self.id = 17
-        self.name = "生存猎"
-        
-        self.attackType = .physics
-        
-        self.sp = 2
-        self.hp = 100
-        self.atk = 20
-        self.def = 0
-        self.mag = 0
-        self.spd = 30
-        
-    }
-    
-    
-    
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         damage.destination = character.enemy.findCharacter(forRangeAttack: character.position)
@@ -83,26 +62,7 @@ class LRShengCun: MMCard {
 
 
 class LRSheJi: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "lr_sheji"
-        self.id = 18
-        self.name = "射击猎"
-        
-        self.attackType = .physics
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 20
-        self.def = 0
-        self.mag = 0
-        self.spd = 30
-        
-    }
-    
-    
+
     override func createSkill(character: MMUnit) -> BTSkill {
         let skill = super.createSkill(character: character)
         if skill.index == 1 {
@@ -164,23 +124,7 @@ class LRSheJi: MMCard {
 }
 
 class  LRShouWang: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "lr_shouwang"
-        self.id = 19
-        self.name = "兽王猎"
-      
-        self.sp = 2
-        self.hp = 100
-        self.atk = 20
-        self.def = 0
-        self.mag = 0
-        self.spd = 30
-        
-    }
-    
+
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         if skill.index == 1 {
             let damage = character.createDamage()

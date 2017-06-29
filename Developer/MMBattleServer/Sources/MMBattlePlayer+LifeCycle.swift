@@ -24,6 +24,8 @@ extension MMBattlePlayer {
         //char before状态
         char.willHit()
         
+        
+        
         let skill = char.createSkill()
         self.record.putSkill(skill: skill)
         
@@ -31,7 +33,7 @@ extension MMBattlePlayer {
         
         //跳过所有hit
         if skill.index == 0 {
-            char.didHit(skill: skill, mainDamage: nil, sideDamages: [])
+//            char.didHit(skill: skill, mainDamage: nil, sideDamages: [])
             self.record.pushFightLog()
             return
         }

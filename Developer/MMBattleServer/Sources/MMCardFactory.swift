@@ -22,118 +22,76 @@ class MMCardFactory {
     }
     
     
-    func findCard(key: String) -> MMCard {
-        
-        if key.contains("boss") {
-            print("this is boss")
+    
+    func findCard(forCls cls: String) -> MMCard {
+        if let c = self.cards[cls] {
+            return c
         }
         
-        
-        if let card = cards[key] {
-            return card
-        }
-        
-        let json = JSON.read(fromFile: "\(UnitPath)/\(key)")!
         let card: MMCard
-        
-        if key.contains("_fs_") {
-            card = MMNPC_FS(key: key)
-        } else if key.contains("_ms_") {
-            card = MMNPC_MS()
-        } else if key.contains("_ss_") {
-            card = MMNPC_SS(key: key)
-        } else if key.contains("_dz_") {
-            card = MMNPC_DZ(key: key)
-        } else if key.contains("_xd_") {
-            card = MMNPC_XD(key: key)
-        } else if key.contains("_sm_") {
-            card = MMNPC_SM()
-        } else if key.contains("_lr_") {
-            card = MMNPC_LR(key: key)
-        } else if key.contains("_zs_") {
-            card = MMNPC_ZS(key: key)
-        } else if key.contains("_qs_") {
-            card = MMNPC_QS(key: key)
-        } else {
-            
-            let cls = json["cls"].string!
-            
-            switch cls {
-            case "fs_huoyan":
-                card = FSHuoYan()
-            case "fs_bingshuang":
-                card = FSBingShuang()
-            case "fs_aoshu":
-                card = FSAoShu()
-            case "ms_shensheng":
-                card = MSShenSheng()
-            case "ms_jielv":
-                card = MSJieLv()
-            case "ms_anying":
-                card = MSAnYing()
-            case "ss_tongku":
-                card = SSTongKu()
-            case "ss_huimie":
-                card = SSHuiMie()
-            case "ss_emo":
-                card = SSEMo()
-            case "dz_cisha":
-                card = DZCiSha()
-            case "dz_minrui":
-                card = DZMinRui()
-            case "dz_zhandou":
-                card = DZZhanDou()
-            case "xd_xiong":
-                card = XDXiong()
-            case "xd_mao":
-                card = XDMao()
-            case "xd_niao":
-                card = XDNiao()
-            case "xd_zhiliao":
-                card = XDZhiLiao()
-            case "sm_yuansu":
-                card = SMYuanSu()
-            case "sm_zengqiang":
-                card = SMZengQiang()
-            case "sm_zhiliao":
-                card = SMZhiLiao()
-            case "lr_sheji":
-                card = LRSheJi()
-            case "lr_shengcun":
-                card = LRShengCun()
-            case "lr_shouwang":
-                card = LRShouWang()
-            case "zs_wuqi":
-                card = ZSWuQi()
-            case "zs_fangyu":
-                card = ZSFangYu()
-            case "zs_kuangbao":
-                card = ZSKuangBao()
-            case "qs_chengjie":
-                card = QSChengJie()
-            case "qs_fangyu":
-                card = QSFangYu()
-            case "qs_zhiliao":
-                card = QSShenSheng()
-            default:
-                fatalError()
-            }
-            
+        switch cls {
+        case "fs_huoyan":
+            card = FSHuoYan()
+        case "fs_bingshuang":
+            card = FSBingShuang()
+        case "fs_aoshu":
+            card = FSAoShu()
+        case "ms_shensheng":
+            card = MSShenSheng()
+        case "ms_jielv":
+            card = MSJieLv()
+        case "ms_anying":
+            card = MSAnYing()
+        case "ss_tongku":
+            card = SSTongKu()
+        case "ss_huimie":
+            card = SSHuiMie()
+        case "ss_emo":
+            card = SSEMo()
+        case "dz_cisha":
+            card = DZCiSha()
+        case "dz_minrui":
+            card = DZMinRui()
+        case "dz_zhandou":
+            card = DZZhanDou()
+        case "xd_xiong":
+            card = XDXiong()
+        case "xd_mao":
+            card = XDMao()
+        case "xd_niao":
+            card = XDNiao()
+        case "xd_zhiliao":
+            card = XDZhiLiao()
+        case "sm_yuansu":
+            card = SMYuanSu()
+        case "sm_zengqiang":
+            card = SMZengQiang()
+        case "sm_zhiliao":
+            card = SMZhiLiao()
+        case "lr_sheji":
+            card = LRSheJi()
+        case "lr_shengcun":
+            card = LRShengCun()
+        case "lr_shouwang":
+            card = LRShouWang()
+        case "zs_wuqi":
+            card = ZSWuQi()
+        case "zs_fangyu":
+            card = ZSFangYu()
+        case "zs_kuangbao":
+            card = ZSKuangBao()
+        case "qs_chengjie":
+            card = QSChengJie()
+        case "qs_fangyu":
+            card = QSFangYu()
+        case "qs_zhiliao":
+            card = QSShenSheng()
+        default:
+            fatalError()
         }
-        
-        
-        cards.updateValue(card, forKey: key)
-        
-        loadCardProperties(fromJSON: json)
-        
         return card
-        
+
     }
-    
-    
-    
-    
-    
     
     
     
@@ -177,69 +135,17 @@ class MMCardFactory {
         cards.updateValue(QSChengJie(), forKey: "qs_chengjie")
         
         
-        do {
-            let files = try FileManager.default.contentsOfDirectory(atPath: CardPath)
-            for file in files {
-                if file.contains(".") {
-                    continue
-                }
-                let json = JSON.read(fromFile: "\(CardPath)/\(file)")!
-                loadCardProperties(fromJSON: json)
-            }
-        } catch {
-            fatalError()
-        }
-        
-        
-        
+        cards.updateValue(MMNPC_FS(), forKey: "fs_normal")
+        cards.updateValue(MMNPC_MS(), forKey: "ms_normal")
+        cards.updateValue(MMNPC_SS(), forKey: "ss_normal")
+        cards.updateValue(MMNPC_DZ(), forKey: "dz_normal")
+        cards.updateValue(MMNPC_XD(), forKey: "xd_normal")
+        cards.updateValue(MMNPC_LR(), forKey: "lr_normal")
+        cards.updateValue(MMNPC_SM(), forKey: "sm_normal")
+        cards.updateValue(MMNPC_QS(), forKey: "qs_normal")
+        cards.updateValue(MMNPC_ZS(), forKey: "zs_normal")
     }
     
-    
-    
-    
-    @discardableResult
-    private func loadCardProperties(fromJSON json: JSON) -> MMCard {
-        
-        let card = cards[json["key"].stringValue]!
-
-        
-        card.key = json["key"].string!
-        card.id     = json["id"].intValue
-        card.name   = json[kName].stringValue
-        
-//        card.attackRule = AttackRule.deserilize(fromString: json["attackrule"].string!)
-//        card.attackArea = AttackArea.deserilize(fromString: json["attackarea"].string!)
-        
-        card.attackType = MMAttackType(rawValue: json[kAttackType].string ?? "none")!
-        
-        card.skill1Factor = json["skill1factor"].intValue
-        card.skill2Factor = json["skill2factor"].intValue
-        
-        
-        card.sp     = json["maxsp"].int ?? json["sp"].int!
-        card.hp     = json["maxhp"].int ?? json["hp"].int!
-        
-        
-        card.atk    = json["atk"].int ?? 0
-        card.def    = json["def"].int ?? 0
-        card.mag    = json["mag"].int ?? 0
-        card.spd    = json["spd"].int ?? 0
-        
-        
-        card.baoji      = json["baoji"].int ?? 0
-        card.shanbi     = json["shanbi"].int ?? 0
-        card.mingzhong  = json["mingzhong"].int ?? 0
-        card.gedang     = json["gedang"].int ?? 0
-        
-        card.zaisheng   = json["zaisheng"].int ?? 0
-        card.xixue      = json["xixue"].int ?? 0
-        card.fantanwuli  = json["fantanwuli"].int ?? 0
-        card.fantanfashu = json["fantanfashu"].int ?? 0
-        
-        
-        return card
-        
-    }
     
     
     

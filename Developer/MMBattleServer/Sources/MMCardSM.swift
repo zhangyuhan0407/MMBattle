@@ -11,26 +11,6 @@ import Foundation
 
 class SMZengQiang: MMCard {
     
-    override init() {
-        super.init()
-        
-        self.key = "sm_zengqiang"
-        self.id = 20
-        self.name = "增强萨"
-        
-        self.attackType = .lightning
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 50
-        self.def = 0
-        self.mag = 0
-        self.spd = 10
-        
-        
-    }
-    
-    
     override func createSkill(character: MMUnit) -> BTSkill {
         let skill = super.createSkill(character: character)
         if skill.index == 1 {
@@ -61,7 +41,6 @@ class SMZengQiang: MMCard {
         if let _ = skill.userinfo["isfengnu"] as? Bool {
             for _ in 0..<2 {
                 let damage = character.createDamage()
-                damage.value = skill2Factor
                 damage.destination = skill.mainDamage!.destination
                 damages.append(damage)
             }
@@ -86,26 +65,6 @@ class SMZengQiang: MMCard {
 
 
 class SMYuanSu: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "sm_yuansu"
-        self.id = 21
-        self.name = "元素萨"
-        
-        self.attackType = .lightning
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 50
-        self.def = 0
-        self.mag = 0
-        self.spd = 10
-        
-        
-    }
-    
     
     override func createSkill(character: MMUnit) -> BTSkill {
         let skill = super.createSkill(character: character)
@@ -196,26 +155,7 @@ class SMYuanSu: MMCard {
 
 
 class SMZhiLiao: MMCard {
-    
-    override init() {
-        super.init()
-        
-        self.key = "sm_huifu"
-        self.id = 22
-        self.name = "恢复萨"
-        
-        self.attackType = .nature
-        
-        self.sp = 3
-        self.hp = 100
-        self.atk = 50
-        self.def = 0
-        self.mag = 0
-        self.spd = 10
-        
-    }
-    
-    
+
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         if skill.index == 1 {
             let damage = character.createDamage()

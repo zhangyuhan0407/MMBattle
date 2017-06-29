@@ -64,7 +64,7 @@ func makeBaoJi(char1: MMUnit, char2: MMUnit) -> Bool {
 
 func makeGeDang(char1: MMUnit, char2: MMUnit) -> Bool {
     let random = Int.random()
-    if char1.gedang > random {
+    if char2.gedang > random {
         return true
     }
     
@@ -104,15 +104,14 @@ func makeCalculatedValue(damage: MMDamage, char1: MMUnit, char2: MMUnit) -> MMDa
     
     
     //治疗伤害
-//    if damage.type == .heal {
-//        if makeBaoJi(char1: char1, char2: char2) {
-//            damage.value = damage.value.multiply(1.4)
-//        }
-//        
-//        damage.value -= char2.hp.multiply(0.05)
-//        
-//        return damage
-//    }
+    if damage.value < 0 {
+        if makeBaoJi(char1: char1, char2: char2) {
+            damage.isBaoji = true
+            damage.value = damage.value.multiply(1.5)
+        }
+        
+        return damage
+    }
     
    
     //物理伤害
@@ -123,12 +122,12 @@ func makeCalculatedValue(damage: MMDamage, char1: MMUnit, char2: MMUnit) -> MMDa
         if makeMingZhong(char1: char1, char2: char2) {
             if makeBaoJi(char1: char1, char2: char2) {
                 damage.isBaoji = true
-                damage.value = damage.value.multiply(1.5)
+                damage.value = damage.value.multiply(2)
             }
             
             if makeGeDang(char1: char1, char2: char2) {
                 damage.isGedang = true
-                damage.value = damage.value.multiply(0.55)
+                damage.value = damage.value.multiply(0.6)
             }
             
         } else {
@@ -141,16 +140,7 @@ func makeCalculatedValue(damage: MMDamage, char1: MMUnit, char2: MMUnit) -> MMDa
         if damage.value < 0 {
             damage.value = 0
         }
-        
-        let factor: Float = 1
-//        if damage.skillIndex == 1 {
-//            factor = char1.card.skill1Factor
-//        } else {
-//            factor = char1.card.skill2Factor
-//        }
-        
-        damage.value = damage.value.multiply(factor)
-        
+
         return damage
     }
     
@@ -158,26 +148,21 @@ func makeCalculatedValue(damage: MMDamage, char1: MMUnit, char2: MMUnit) -> MMDa
     
     //法术伤害
     if damage.type != .physics {
-//        damage.value -= char2.mag.multiply(0.5)
-        
-        if makeBaoJi(char1: char1, char2: char2) {
-            damage.isBaoji = true
-            damage.value = damage.value.multiply(1.75)
+        if makeMingZhong(char1: char1, char2: char2) {
+            if makeBaoJi(char1: char1, char2: char2) {
+                damage.isBaoji = true
+                damage.value = damage.value.multiply(1.5)
+            }
+        }
+        else {
+            damage.isShanbi = true
+            damage.value = 0
         }
         
         //处理异常
         if damage.value < 0 {
             damage.value = 0
         }
-        
-        let factor: Float = 1
-//        if damage.skillIndex == 1 {
-//            factor = char1.card.skill1Factor
-//        } else {
-//            factor = char1.card.skill2Factor
-//        }
-        
-        damage.value = damage.value.multiply(factor)
         
         return damage
     }

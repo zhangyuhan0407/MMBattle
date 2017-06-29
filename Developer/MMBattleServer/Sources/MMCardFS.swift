@@ -13,26 +13,6 @@ import OCTFoundation
 
 class FSAoShu: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "fs_aoshu"
-        self.id = 1
-        self.name = "奥法"
-        
-        self.attackType = .arcane
-        
-        self.sp = 2
-        self.hp = 300
-        self.atk = 0
-        self.def = 0
-        self.mag = 130
-        self.spd = 30
-        
-    }
-    
-    
     
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage {
         let damage = character.createDamage()
@@ -49,15 +29,22 @@ class FSAoShu: MMCard {
     
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
+        
         let damage = mainDamage!
         
+        
         if skill.index == 1 {
+            if damage.isShanbi {
+                return
+            }
             character.sp += 1
             damage.destination.sp += 1
             
         } else {
             character.sp = 0
-            
+            if damage.isShanbi {
+                return
+            }
             damage.destination.addBuff(MMBuffChenMo())
             character.record.putAfterFight(damage.destination.createCustomAnimationDictionary(type: .addBuff(key: "chenmo")))
         }
@@ -68,27 +55,6 @@ class FSAoShu: MMCard {
 
 
 class FSBingShuang: MMCard {
-    override init() {
-        
-        super.init()
-        
-        self.key = "fs_bingshuang"
-        self.id = 2
-        self.name = "冰法"
-        
-        self.attackType = .ice
-        
-        self.sp = 2
-        self.hp = 100
-        self.atk = 0
-        self.def = 0
-        self.mag = 90
-        self.spd = 30
-        
-        self.baoji = 30
-        
-    }
-    
     
     override func createSkill(character: MMUnit) -> BTSkill {
         let skill = super.createSkill(character: character)
@@ -223,28 +189,6 @@ class FSBingShuang: MMCard {
 
 class FSHuoYan: MMCard {
     
-    override init() {
-        
-        super.init()
-        
-        self.key = "fs_huoyan"
-        self.id = 3
-        self.name = "火法"
-        
-        self.attackType = .fire
-        
-        self.sp = 2
-        self.hp = 100
-        self.atk = 0
-        self.def = 0
-        self.mag = 90
-        self.spd = 30
-        
-        self.baoji = 30
-        
-    }
-    
-    
     override func createMainDamage(character: MMUnit, skill: BTSkill) -> MMDamage? {
         let damage = character.createDamage()
         
@@ -256,15 +200,17 @@ class FSHuoYan: MMCard {
     
     override func didHit(character: MMUnit, skill: BTSkill, mainDamage: MMDamage?, sideDamages: [MMDamage]) {
         let damage = mainDamage!
-        if damage.isShanbi { return }
         
         if skill.index == 1 {
+            if damage.isShanbi { return }
+            
             character.sp += 1
             if damage.isBaoji {
                 character.sp += 1
             }
         } else {
             character.sp = 0
+            if damage.isShanbi { return }
         }
         
         damage.destination.sp += 1

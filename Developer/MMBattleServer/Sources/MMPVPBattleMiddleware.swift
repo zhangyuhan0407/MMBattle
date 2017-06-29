@@ -37,7 +37,7 @@ class MMPVPBattleMiddleware: RouterMiddleware {
 //        let guardiankey = json["guardiankey"].string ?? ""
         
         
-        let characters = MMUnit.deserialize(fromJSONs: charJSONs)
+        let characters = MMUnitFactory.deserialize(fromJSONs: charJSONs)
 //        let guardian = MMGuardianRepo.create(key: guardiankey)
         
         
